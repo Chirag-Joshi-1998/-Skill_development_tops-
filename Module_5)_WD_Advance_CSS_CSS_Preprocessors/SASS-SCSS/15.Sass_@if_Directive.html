@@ -1,0 +1,78 @@
+<!-- @if Directive -->
+
+<!-- The Sass @if directive accepts SassScript expressions 
+and uses the nested styles if the expression returns anything other 
+than false or null.
+
+For example: If you use the following SCSS file. -->
+
+
+<!-- SCSS Syntax: -->
+<!-- p {  
+    @if 1 + 1 == 2 { border: 1px solid;  }  
+    @if 5 < 3      { border: 2px dotted; }  
+    @if null       { border: 3px double; }  
+  }    -->
+
+
+<!-- After compilation, it will create a CSS file having following code:
+
+CSS Syntax:
+
+p {  
+  border: 1px solid; }  -->
+  
+
+<!-- Sass @if Directive Example -->
+<!-- Let's take an example to demonstrate the usage of Sass 
+@if directive. We have an HTML file named "simple.html",
+ having the following data. -->
+
+
+ <!DOCTYPE html>  
+<html>  
+<head>  
+   <title>@if Directive Example</title>  
+   <link rel="stylesheet" type="text/css" href="./css/style.css"/>  
+</head>  
+<body>  
+   <div class="container">  
+   <h2>Welcome to topsacademy</h2>  
+   <p>A solution of all technology. </p>  
+   </div>  
+</body>  
+</html>  
+
+
+<!-- Create a SCSS file named "simple.scss", having the following data. -->
+
+<!-- SCSS file: simple.scss -->
+
+<!-- p {  
+    @if 1 + 1 == 2 { border: 1px solid;  }  
+    @if 5 < 3      { border: 2px dotted; }  
+    @if null       { border: 3px double; }  
+  }    -->
+
+
+<!-- Put the both file inside the root folder.
+
+Now, open command prompt and run the watch command to tell 
+SASS to watch the file and update the CSS whenever SASS file 
+is changed.
+
+Execute the following code: sass --watch simple.scss:./css/style.css
+
+It will create a normal CSS file named "./css/style.css"
+ in the same directory automatically. -->
+
+
+<!-- The created CSS file "./css/style.css" contains the following code: -->
+
+<!-- p {  
+    border: 1px solid; } -->
+
+
+
+
+

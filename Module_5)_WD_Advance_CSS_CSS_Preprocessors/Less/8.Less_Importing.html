@@ -1,0 +1,53 @@
+<!-- HTML file: simple.html -->
+<!DOCTYPE html>  
+<html>  
+<head>  
+   <title>Less Importing</title>  
+   <link rel="stylesheet" type="text/css" href="./Css/style.css" />  
+</head>  
+<body>  
+   <h1>Less Importing Example</h1>  
+   <h3>MAIN BENEFITS YOU GET FROM OUR COMPANY :</h3>  
+   <p class="myclass">Life Time Validity.</p>  
+   <p class="myclass1">Training by Java Professionals.</p>  
+   <p class="myclass2">Small Batches to focus on each student.</p>  
+</body>  
+</html>  
+
+
+<!-- Next, create an external file named "myfile.less"
+that you want to import.
+
+Less file: myfile.less -->
+
+
+<!-- .myclass{  
+    color: blue;  
+}  
+.myclass1{  
+    color: red;  
+}    -->
+
+
+<!-- Now create a Less file named "simple.less", 
+having the importing path. -->
+
+<!-- Less file: simple.less
+
+@import "myfile.less";  
+.myclass2  
+{  
+color: brown;  
+}   -->
+
+<!-- The generated CSS "simple.css", has the following code:
+
+.myclass {  
+  color: blue;  
+}  
+.myclass1 {  
+  color: red;  
+}  
+.myclass2 {  
+  color: brown;  
+}   -->

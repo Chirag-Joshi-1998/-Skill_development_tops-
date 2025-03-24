@@ -1,0 +1,55 @@
+<!-- Sass @while Directive Example -->
+<!-- Let's take an example to demonstrate the usage of Sass @while directive. We have an HTML file named "simple.html", having the following data. -->
+
+<!-- HTML file: simple.html -->
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+   <title>@while Directive Example</title>  
+   <link rel="stylesheet" type="text/css" href="./css/style.css"/>  
+</head>  
+<body>  
+   <p class="paddding-100">This line has 100 px padding. </p>  
+   <p class="paddding-80">This line has 80 px padding.</p>  
+   <p class="paddding-60">This line has 60 px padding.</p>  
+   <p class="paddding-40">This line has 40 px padding.</p>  
+   <p class="paddding-20">This line has 20 px padding.</p>  
+</body>  
+</html>  
+
+<!-- Create a SCSS file named "simple.scss", having the following data. -->
+
+<!-- SCSS file: simple.scss -->
+
+<!-- $i: 100;  
+@while $i > 0 {  
+  .paddding-#{$i} { padding-left: 1px * $i; }  
+  $i: $i - 20;  
+}    -->
+
+<!-- Put the both file inside the root folder.
+
+Now, open command prompt and run the watch command to tell 
+SASS to watch the file and update the CSS whenever SASS file
+ is changed.
+
+Execute the following code: sass --watch simple.scss:./css/style.css
+
+It will create a normal CSS file named "./css/style.css" in the same 
+directory automatically. -->
+
+<!-- The created CSS file "./css/style.css" contains the following code: -->
+
+<!-- .paddding-100 {  
+    padding-left: 100px; }  
+  .paddding-80 {  
+    padding-left: 80px; }  
+  .paddding-60 {  
+    padding-left: 60px; }  
+  .paddding-40 {  
+    padding-left: 40px; }  
+  .paddding-20 {  
+    padding-left: 20px; } -->
+
+<!-- Now, execute the above html file, it will read the CSS value. -->

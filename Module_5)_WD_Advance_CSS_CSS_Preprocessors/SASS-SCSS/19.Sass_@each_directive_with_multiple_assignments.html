@@ -1,0 +1,66 @@
+<!-- Sass @each Directive with multiple assignments -->
+<!-- Example -->
+
+<!-- Let's take an example to demonstrate the 
+usage of Sass @each directive with multiple assignments.
+ We have an HTML file named "simple.html", having the following
+  data. -->
+
+<!-- HTML file: simple.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>@each Directive with multiple assignments Example</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+  </head>
+  <body>
+    <p class="aqua">This is line one.</p>
+    <p class="red">This is line two.</p>
+    <p class="green">This is line three.</p>
+  </body>
+</html>
+
+
+<!-- Create a SCSS file named "simple.scss", having the following data. -->
+
+<!-- SCSS file: simple.scss -->
+
+
+<!-- @each $color, $border in (aqua, dotted),  
+(red, solid),  
+(green, double){  
+.#{$color} {  
+background-color : $color;  
+border: $border;  
+}  
+}   -->
+
+<!-- Put the both file inside the root folder. -->
+
+<!-- Now, open command prompt and run the watch command to
+  tell SASS to watch the file and update the CSS whenever 
+  SASS file is changed.
+
+Execute the following code: sass --watch simple.scss:./css/style.css
+
+It will create a normal CSS file named "./css/style.css" in the same 
+directory automatically. -->
+
+<!-- The created CSS file "./css/style.css" contains the following code: -->
+
+<!-- .aqua {  
+    background-color: aqua;  
+    border: dotted; }  
+  .red {  
+    background-color: red;  
+    border: solid; }  
+  .green {  
+    background-color: green;  
+    border: double; }   -->
+
+
+<!-- Now, execute the above html file, it will read the CSS value. -->
+ 
+
+
+

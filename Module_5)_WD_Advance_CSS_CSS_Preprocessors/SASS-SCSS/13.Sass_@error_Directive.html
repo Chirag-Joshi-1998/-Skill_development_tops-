@@ -1,0 +1,26 @@
+<!-- Let's create a SCSS file named "error.scss", 
+ having the following data. -->
+
+ <!-- $colors: (  
+  blue: #c0392b,  
+  black: #2980b9,  
+);  
+@function style-variation($style) {  
+  @if map-has-key($colors, $style) {  
+    @return map-get($colors, $style);  
+  }  
+  @error "Invalid color: '#{$style}'.";  
+}  
+.container {  
+  style: style-variation(white);  
+}   -->
+
+
+<!-- Now, open command prompt and run the watch command to tell 
+SASS to watch the file and update the CSS whenever SASS file is
+ changed.
+
+Execute the following code: sass --watch error.scss:error.css
+
+It will create a normal CSS file named "error.css" in the same 
+directory automatically. -->

@@ -1,0 +1,69 @@
+<!-- Through Keyword -->
+<!-- In Sass @for directive, the through keyword is used
+to specify the range including both the values of and . -->
+
+<!-- @for $var from <start> through <end>   -->
+
+<!-- Parameter explanation:
+
+$var: It specifies the name of the variable like $i.
+
+and : and are SassScript expressions which will return integers. If the is greater than then it decreases the value of counter variable and when is lesser than then it increases the value of counter variable. -->
+
+<!-- Sass @for Directive Example with through keyword
+Let's take an example to demonstrate the usage of 
+Sass @for directive with through keyword. We have an HTML 
+file named "simple.html", having the following data. -->
+
+
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+   <title>@for directive example with through keyword</title>  
+   <link rel="stylesheet" type="text/css" href="./css/style.css"/>  
+</head>  
+<body>  
+   <p class="p1">Welcome to topsacademy</p>  
+   <p class="p2">Welcome to topsacademy</p>  
+   <p class="p3">Welcome to topsacademy</p>  
+   <p class="p4">Welcome to topsacademy</p>  
+</body>  
+</html>  
+
+
+<!-- Create a SCSS file named "simple.scss", having the following data. -->
+
+<!-- SCSS file: simple.scss -->
+
+<!-- @for $i from 1 through 4 {  
+    .p#{$i} { padding-left : $i * 10px; }  
+  }    -->
+
+<!-- 
+Put the both file inside the root folder.
+
+Now, open command prompt and run the watch command to 
+tell SASS to watch the file and update the CSS whenever 
+SASS file is changed.
+
+Execute the following code: sass --watch simple.scss:./css/style.css
+
+It will create a normal CSS file named "./css/style.css" in the same
+ directory automatically. -->
+
+
+<!-- The created CSS file "./css/style.css" contains the following code: -->
+
+<!-- .p1 {  
+    padding-left: 10px; }  
+  .p2 {  
+    padding-left: 20px; }  
+  .p3 {  
+    padding-left: 30px; }  
+  .p4 {  
+    padding-left: 40px; }   -->
+
+    <!-- Now, execute the above html file, it will read the CSS value. -->
+    <!-- Here, you can see the 10 px padding for every next statement. -->
+

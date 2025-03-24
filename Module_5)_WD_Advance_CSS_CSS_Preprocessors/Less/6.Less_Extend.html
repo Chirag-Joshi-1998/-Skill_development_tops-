@@ -1,0 +1,88 @@
+<!-- HTML file: simple.html -->
+
+
+<!DOCTYPE html>  
+<head>  
+ <link rel="stylesheet" href="./Css/style.css" type="text/css" />  
+</head>  
+<body>  
+ <h2>Less Extend Example</h2>  
+ <h3>Welcome to tops</h3>  
+</body>  
+</html>  
+
+
+<!-- Now create a file named "simple.less". It is similar to CSS file. The only one difference is that it is saved with ".less" extension. -->
+
+<!-- Less file: simple.less
+
+h2 {  
+  &:extend(.style);  
+  font-style: italic;  
+}  
+.style {  
+  background: lightgreen;  
+}   -->
+
+
+<!-- The generated CSS "simple.css", has the following code: -->
+
+
+<!-- h2 {  
+    font-style: italic;  
+  }  
+  .style,  
+  h2 {  
+    background: lightgreen;  
+  }    -->
+
+  <!-- Extend Syntax -->
+
+  <!-- HTML file: simple.html -->
+
+
+  <!-- <!DOCTYPE html>  
+
+  <head>  
+     <link rel="stylesheet" href="simple.css" type="text/css" />  
+  </head>  
+  <body>  
+     <div class="style">  
+      <h2>Welcome to JavaTpoint</h2>  
+      <div class="container">  
+        <p> A solution of all technology.</p>  
+      </div>  
+     </div>  
+  </body>  
+  </html>   -->
+
+
+  <!-- Less file: simple.Less -->
+
+
+  <!-- .style:extend(.container, .img)  
+{  
+  background: violet;  
+}  
+.container {  
+  font-style: italic;  
+}  
+.img{  
+   font-size: 30px;  
+ }   -->
+
+
+
+ <!-- The generated CSS "simple.css", has the following code:
+
+.style {  
+  background: violet;  
+}  
+.container,  
+.style {  
+  font-style: italic;  
+}  
+.img,  
+.style {  
+  font-size: 30px;  
+}   -->

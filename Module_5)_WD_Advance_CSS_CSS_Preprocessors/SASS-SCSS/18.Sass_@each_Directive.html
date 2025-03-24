@@ -1,0 +1,72 @@
+<!-- Simple @each Directive -->
+<!-- In Sass simple @each directive, a variable is defined
+  which consists off the value of each item in a list. -->
+
+<!-- Syntax: -->
+
+<!-- @each $var in <list or map>    -->
+<!-- 
+Parameter explanation:
+
+$var: It specifies the name of the variable. @each rule sets $var to each item in the list and provides styles to outputs using the value of $var.
+
+: and are SassScript expressions which returns a list or a map -->
+
+
+<!-- Sass @each Directive Example -->
+<!-- Let's take an example to demonstrate the usage 
+of Sass @each directive. We have an HTML file named 
+"simple.html", having the following data. -->
+
+<!-- HTML file: simple.html -->
+
+
+<!-- <!DOCTYPE html>  
+<html>  
+<head>  
+   <title>@each Directive Example</title>  
+   <link rel="stylesheet" type="text/css" href="./css/style.css"/>  
+</head>  
+<body>  
+   <p class="p_pink">This is first paragraph.</p>  
+   <p class="p_violet">This is second paragraph.</p>  
+   <p class="p_yellow">This is third paragraph.</p>  
+   <p class="p_blue">This is fourth paragraph.</p>  
+</body>  
+</html>   -->
+
+
+<!-- Create a SCSS file named "simple.scss", having the following data. -->
+
+
+<!-- SCSS file: simple.scss -->
+
+<!-- @each $color in pink, violet, yellow, blue {  
+    .p_#{$color} {  
+      background-color: #{$color};  
+    }  
+  }   -->
+
+<!-- 
+Put the both file inside the root folder.
+
+Now, open command prompt and run the watch command to 
+tell SASS to watch the file and update the CSS whenever 
+SASS file is changed.
+
+Execute the following code: sass --watch simple.scss:./css/style.css
+
+It will create a normal CSS file named "./css/style.css" in the same 
+directory automatically. -->
+
+
+<!-- The created CSS file "./css/style.css" contains the following code: -->
+<!-- .p_pink {  
+    background-color: pink; }  
+  .p_violet {  
+    background-color: violet; }  
+  .p_yellow {  
+    background-color: yellow; }  
+  .p_blue {  
+    background-color: blue; }   -->
+

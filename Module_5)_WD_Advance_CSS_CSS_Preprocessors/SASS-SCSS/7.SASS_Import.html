@@ -1,0 +1,55 @@
+<!-- // _reset.scss  
+html,  
+body,  
+ul,  
+ol {  
+   margin: 0;  
+  padding: 0;  
+}  
+  
+
+
+// base.scss  
+@import 'reset';  
+body {  
+  font: 100% Helvetica, sans-serif;  
+  background-color: #efefef;  
+}   
+
+
+While importing the file, you don't need to include the file extension ".scss". It will generate the following CSS file:
+
+CSS after processing:
+
+
+ html, body, ul, ol {  
+  margin: 0;  
+  padding: 0;  
+}  
+body {  
+  font: 100% Helvetica, sans-serif;  
+  background-color: #efefef;  
+} -->
+
+<!DOCTYPE html>  
+<html>    
+<head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">    
+   <title> Import example of sass</title>    
+   <link rel="stylesheet" type="text/css" href="./css/style.css"/>    
+</head>    
+<body>  
+<h3>Available courses on topsacademy:</h3>  
+<ul>  
+  <li>SQL</li>  
+  <li>Oracle</li>  
+  <li>Java  
+    <ul>  
+      <li>Core Java</li>  
+      <li>Advance Java</li>  
+    </ul>  
+  </li>  
+  <li>HTML/CSS</li>  
+  <li>Etc.</li>  
+</ul>  
+</body>  
+</html>    

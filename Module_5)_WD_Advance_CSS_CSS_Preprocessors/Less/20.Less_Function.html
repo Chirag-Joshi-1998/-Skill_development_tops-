@@ -1,0 +1,34 @@
+<!-- HTML file: simple.html -->
+
+<html>  
+<head>  
+   <title>Less Functions Example</title>  
+   <link rel="stylesheet" type="text/css" href="./Css/style.css" />  
+</head>  
+<body>  
+   <h1>Less Functions Example</h1>  
+   <p class="mycolor">Less facilitates you to customize, manage and reuse style sheet for web site.</p>  
+</body>  
+</html>  
+
+
+<!-- Now create a file named "simple.less". It is similar to CSS file. The only one difference is that it is saved with ".less" extension. -->
+
+<!-- Less file: simple.less -->
+
+<!-- @color: #FF8000;  
+@width:1.0;  
+.mycolor{  
+color: @color;  
+ width: percentage(@width);  
+}    -->
+<!-- 
+This will compile the "simple.less" file. A CSS file named 
+"simple.css" will be generated. -->
+
+<!-- The generated CSS "simple.css", has the following code:
+
+.mycolor {  
+  color: #FF8000;  
+  width: 100%;  
+}   -->

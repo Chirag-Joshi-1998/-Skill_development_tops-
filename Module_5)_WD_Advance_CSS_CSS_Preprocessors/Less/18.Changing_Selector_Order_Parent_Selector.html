@@ -1,0 +1,43 @@
+<!-- HTML file: simple.html -->
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+   <link rel="stylesheet" href="./Css/style.css" type="text/css" />  
+   <title>Changing Selector Order Example</title>  
+</head>  
+<body>  
+  <div class="header">  
+    <div class="menu">  
+      <h2>JavaTpoint: A solution of all technology.</h2>  
+      <p>It is possible to reference the parent selector by using &(ampersand) operator.</p>  
+    </div>  
+  </div>  
+  
+</body>  
+</html>  
+
+
+<!-- Now create a file named "simple.less". It is similar to CSS file. The only one difference is that it is saved with ".less" extension. -->
+
+<!-- LESS file: simple.less -->
+
+
+<!-- .header {  
+    .menu {  
+      border-radius: 5px;  
+      border: 1px solid red;  
+      & {  
+        padding-left: 200px;  
+      }  
+    }  
+  }    -->
+
+
+<!-- The generated CSS "simple.css", has the following code:
+
+.header .menu {  
+  border-radius: 5px;  
+  border: 1px solid red;  
+  padding-left: 200px;  
+}    -->

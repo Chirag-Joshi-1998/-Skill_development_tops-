@@ -1,0 +1,58 @@
+<!-- SCSS Syntax: -->
+<!-- @mixin bordered($color, $width: 2px) {  
+    color: #77C1EF;  
+    border: $width solid black;  
+    width: 500px;  
+  }  
+  .style  {  
+    @include bordered($color:#77C1EF, $width: 5px);  
+  }    -->
+
+<!-- After the compilation, you will get the following CSS code. -->
+<!-- CSS : -->
+<!-- .style {  
+    color: #77C1EF;  
+    border: 5px solid black;  
+    width: 500px;  
+   }   -->
+
+<!-- Variable Argument -->
+
+<!-- SCSS Syntax: -->
+
+<!-- @mixin linear-gradient($direction, $gradients...) {  
+    background-color: nth($gradients, 1);  
+    background-image: linear-gradient($direction, $gradients...);  
+  }  
+  .selector {  
+    @include linear-gradient(to right, magenta, red, orange, yellow, green, blue, purple);  
+  }   -->
+
+<!-- After the compilation, you will get the following CSS code.
+
+CSS: -->
+
+<!-- .selector {  
+    background-color: magenta;  
+    background-image: linear-gradient(to right, magenta, red, orange, yellow, green, blue, purple); }   -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LRA</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <p class="style">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptatem
+      quae animi non repellat repellendus repudiandae illo dolores temporibus.
+      Aliquam, quisquam? Sint qui unde sapiente possimus minus asperiores nemo
+      in!
+    </p>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure voluptatibus
+    ipsum quia eveniet ab reprehenderit sint debitis assumenda, magnam vel rem
+    quod! Molestiae, officia corporis recusandae dolores fugit tempora animi!
+  </body>
+</html>

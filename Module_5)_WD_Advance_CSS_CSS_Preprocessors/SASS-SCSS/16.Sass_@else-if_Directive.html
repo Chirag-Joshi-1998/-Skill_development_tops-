@@ -1,0 +1,82 @@
+<!-- The Sass @else-if directive is used when @if directive is failed. 
+If it is failed @else directive is used -->
+
+<!-- SCSS Syntax: -->
+
+
+<!-- $type: monster;  
+p {  
+  @if $type == ocean {  
+    color: blue;  
+  } @else if $type == matador {  
+    color: red;  
+  } @else if $type == monster {  
+    color: green;  
+  } @else {  
+    color: black;  
+  }  
+}   -->
+
+
+<!-- After compilation, it will create a CSS file having following code: -->
+
+<!-- CSS Syntax: -->
+
+
+<!-- Sass @else-if Directive Example -->
+
+
+
+<!-- Let's take an example to demonstrate the usage of Sass @else-if 
+directive. We have 
+an HTML file named "simple.html", having the following data. -->
+
+
+<!-- HTML file: simple.html -->
+
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+   <title>@if Directive Example</title>  
+   <link rel="stylesheet" type="text/css" href="./css/style.css"/>  
+</head>  
+<body>  
+   <div class="container">  
+   <h2>Welcome to topsacademy</h2>  
+   <p>A solution of all technology. </p>  
+   </div>  
+</body>  
+</html>  
+
+
+<!-- Create a SCSS file named "simple.scss", having the following data -->
+<!-- $type: monster;  
+p {  
+  @if $type == ocean {  
+    color: blue;  
+  } @else if $type == matador {  
+    color: red;  
+  } @else if $type == monster {  
+    color: green;  
+  } @else {  
+    color: black;  
+  }  
+}   -->
+
+
+<!-- Put the both file inside the root folder. -->
+<!-- Put the both file inside the root folder.
+
+Now, open command prompt and run the watch command to
+ tell SASS to watch the file and update the CSS whenever SASS 
+ file is changed.
+
+Execute the following code: sass --watch simple.scss:./css/style.css
+
+It will create a normal CSS file named "./css/style.css" in the same 
+directory automatically. -->
+
+<!-- The created CSS file "./css/style.css" contains the following code: -->
+<!-- p {  
+    color: green; }     -->

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operations</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+      /* See this example: */
+      /* @mixin string-concat {
+        &:after {
+          content: "My favorite language is " + Sass;
+          font: Arial + " sans-serif";
+        }
+      }
+      h2 {
+        @include string-concat;
+      } */
+
+      /* After compilation, the resulting CSS will have the following code. */
+      /* h2:after {  
+    content: "My favorite language is Sass";  
+    font: Arial sans-serif;  
+}   */
+
+/* SASS Concatenating Colors */
+
+/* Sass Syntax: */
+
+/* h2 {  
+    color: #468499 + #204479;  
+}   */
+/* CSS: */
+/* h2 {  
+    color: #66c8ff;  
+}   */
+
+/* Sass performs corresponding calculation on color pairs and after concatenation a new color value is formed. */
+
+/* 46+20=66 (red color), 84+44=c8 (green color), and 99+79=ff (blue color)   */
+
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <h2>test</h2>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!-- For example:
+
+CSS code: -->
+
+<!-- 
+p {  
+    color: #232323;  
+    font-family: Helvetica, Arial, sans-serif;  
+    font-size: 14px;  
+    line-height: 21px;  
+}  
+  
+p .intro {  
+    font-variant: small-caps;  
+    font-size: 16px;  
+    line-height: 24px;  
+}  
+  
+p .highlight {  
+    color: #00214D;  
+    font-weight: bold;  
+}   -->
+
+<!-- Less nesting facilitates you to write the above CSS code
+ in a nested manner where you don?t need to write the paragraph 
+ code repeatedly.
+
+Equivalent Less file: -->
+
+
+
+<!-- @textColor: #232323;  
+@textHighlight: #00214D;  
+@fontFamily: Helvetica, Arial, sans-serif;  
+@fontSize: 14px;  
+@lineHeight: 21px;  
+  
+@introSize: 16px;  
+@introLineHeight: 24px;  
+@introFontVariant: small-caps;  
+  
+// Less for Paragraph  
+// ------------------  
+p {  
+ color: @textColor;  
+ font-family: @fontFamily;  
+ font-size: @fontSize;  
+ line-height: @lineHeight;  
+ .intro {  
+  font-variant: @introFontVariant;  
+  font-size: @introSize;  
+  line-height: @introLineHeight;  
+ }   
+ .highlight {  
+  color: @textHighlight;  
+  font-weight: bold;  
+ }   
+}   -->

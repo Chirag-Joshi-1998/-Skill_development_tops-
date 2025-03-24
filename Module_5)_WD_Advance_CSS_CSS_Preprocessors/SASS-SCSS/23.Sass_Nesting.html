@@ -1,0 +1,127 @@
+<!-- Let's see a nesting example. -->
+
+<!-- SCSS Nesting Syntax: -->
+<!-- 
+nav {  
+    ul {  
+      margin: 0;  
+      padding: 0;  
+      list-style: none;  
+    }  
+    li { display: inline-block; }  
+    a {  
+      display: block;  
+      padding: 6px 12px;  
+      text-decoration: none;  
+    }  
+  }   -->
+
+<!-- Equivalent Sass Syntax: -->
+
+<!-- nav  
+  ul  
+    margin: 0  
+    padding: 0  
+    list-style: none  
+  li  
+    display: inline-block  
+  a  
+    display: block  
+    padding: 6px 12px   -->
+
+<!-- When it is processed, it will create a CSS for like this. You 
+     will see that 
+     the ul, li, and a selectors are nested inside the nav selector. -->
+
+<!-- CSS Syntax: -->
+
+<!-- nav ul {  
+        margin: 0;  
+        padding: 0;  
+        list-style: none;  
+      }  
+      nav li {  
+        display: inline-block;  
+      }  
+      nav a {  
+        display: block;  
+        padding: 6px 12px;  
+        text-decoration: none;  
+      }  -->
+
+<!-- SASS Nesting Example -->
+<!-- Let's take an example to see the use of nesting in Sass. 
+ We have an HTML file named "simple.html" having the following code: -->
+ <!-- File: simple.html -->
+
+
+ <!DOCTYPE html>  
+ <html>    
+ <head>    
+    <title> Nesting example of sass</title>    
+    <link rel="stylesheet" href="./css/style.css"> 
+ </head>    
+ <body>  
+ <h3>Available corses on tops:</h3>  
+
+ <nav>
+ <ul>  
+   <li>SQL</li>  
+   <li>Oracle</li>  
+   <li>Java  
+     <ul>  
+       <li>Core Java</li>  
+       <li>Advance Java</li>  
+     </ul>  
+   </li>  
+   <li>HTML/CSS</li>  
+   <li>Etc.</li>  
+ </ul>  
+ </nav>
+ </body>  
+ </html>    
+
+<!-- Create a SCSS file named "simple.scss", having the following code: -->
+
+<!-- File: simple.scss -->
+
+<!-- nav {    
+    ul {    
+      margin: 0;    
+      padding: 0;    
+      list-style: none;    
+    }    
+    li { display: inline-block; }    
+    a {    
+      display: block;    
+      padding: 6px 12px;    
+      text-decoration: none;    
+    }    
+  }     -->
+
+<!-- Put the both file inside the root folder.
+
+Now, open command prompt and run the watch command to 
+tell SASS to watch the file and update the CSS whenever SASS file is
+ changed.
+
+Execute the following code: sass --watch simple.scss:simple.css
+
+
+It will create a normal CSS file named "simple.css" in the
+ same directory automatically. -->
+
+<!-- The created CSS file "simple.css" contains the following code: -->
+
+<!-- nav ul {  
+    margin: 0;  
+    padding: 0;  
+    list-style: none; }  
+  nav li {  
+    display: inline-block; }  
+  nav a {  
+    display: block;  
+    padding: 6px 12px;  
+    text-decoration: none; }   -->
+
+    

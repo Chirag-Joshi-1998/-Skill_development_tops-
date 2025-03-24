@@ -1,0 +1,53 @@
+<!-- Sass @for Directive Example with to keyword -->
+<!-- Let's take an example to demonstrate the usage of Sass 
+@for directive with to keyword. We have an HTML file named 
+"simple.html", having the following data. -->
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+   <title>@for directive example with through keyword</title>  
+   <link rel="stylesheet" type="text/css" href="./css/style.css"/>  
+</head>  
+<body>  
+   <p class="p1">Welcome to topsacademy</p>  
+   <p class="p2">Welcome to topsacademy</p>  
+   <p class="p3">Welcome to topsacademy</p>  
+   <p class="p4">Welcome to topsacademy</p>  
+   
+
+</body>  
+</html>  
+
+<!-- Create a SCSS file named "simple.scss", having the following data. -->
+
+<!-- SCSS file: simple.scss -->
+
+<!-- @for $i from 1 to 4 {  
+  .p#{$i} { padding-left : $i * 10px; }  
+}    -->
+
+<!-- Put the both file inside the root folder.
+
+Now, open command prompt and run the watch command to 
+tell SASS to watch the file and update the CSS whenever 
+SASS file is changed.
+
+Execute the following code: sass --watch simple.scss:./css/style.css
+
+It will create a normal CSS file named "./css/style.css" in the same
+ directory automatically. -->
+
+<!-- The created CSS file "./css/style.css" contains the following code: -->
+<!-- .p1 {  
+    padding-left: 10px; }  
+  .p2 {  
+    padding-left: 20px; }  
+  .p3 {  
+    padding-left: 30px; }   -->
+
+<!-- Now, execute the above html file, it will read the CSS value. -->
+<!-- Now, you can see that padding is done only for 3 statements
+ although we use the rule @for $i from 1 to 4 {.
+
+    This is the difference between through and to keyword in @for directive. -->

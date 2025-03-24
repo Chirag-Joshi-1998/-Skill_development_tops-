@@ -1,0 +1,47 @@
+<!-- Sass @media Directive Example -->
+<!-- Let's take an example to demonstrate the usage of Sass @media directive with multiple assignments and maps. We have an HTML file named "simple.html", having the following data. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sass @media directive Example</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+  </head>
+  <body class="container">
+    <h2>This is a Sass @media directive example:</h2>
+    <img src="../HTML/1.jpg" class="style" />
+  </body>
+</html>
+
+<!-- Create a SCSS file named "simple.scss", having the following data. -->
+
+<!-- h2{  
+    color: violet;  
+    }  
+    .style{  
+    width: 500px;  
+    @media screen and (orientation: portrait){  
+    width:200px;  
+    margin-left: 80px;  
+    }  
+    }   -->
+
+<!-- Put the both file inside the root folder.
+
+Now, open command prompt and run the watch command to tell SASS to watch the file and update the CSS whenever SASS file is changed.
+
+Execute the following code: sass --watch simple.scss:./css/style.css
+
+It will create a normal CSS file named "./css/style.css" in the same directory automatically. -->
+
+<!-- The created CSS file "./css/style.css" contains the following code: -->
+<!-- h2 {  
+    color: violet; }  
+  .style {  
+    width: 500px; }  
+    @media screen and (orientation: portrait) {  
+      .style {  
+        width: 200px;  
+        margin-left: 80px; } }   -->
+
+        

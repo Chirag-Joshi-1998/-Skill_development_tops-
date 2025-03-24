@@ -1,0 +1,83 @@
+<!-- Mixin Syntax:
+
+.round-borders {  
+  border-radius: 5px;  
+  -moz-border-radius: 5px;  
+  -webkit-border-radius: 5px;  
+}  
+#menu {  
+  color: gray;  
+  .round-borders;  
+}   -->
+
+
+<!-- Mixin Output:
+
+.round-borders {  
+  border-radius: 5px;  
+  -moz-border-radius: 5px;  
+  -webkit-border-radius: 5px;  
+}  
+#menu {  
+  color: gray;  
+  border-radius: 5px;  
+  -moz-border-radius: 5px;  
+  -webkit-border-radius: 5px;  
+}   -->
+
+
+<!-- Let's take an example to demonstrate the use of mixins in 
+Less file.
+
+Create a HTML file named "simple.html", having the following 
+data.
+
+HTML file: simple.html -->
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <link rel="stylesheet" href="simple.css" type="text/css" />  
+  <title>Less Mixin Example</title>  
+</head>  
+<body>  
+<h1>Welcome to JavaTpoint</h1>  
+<h3>MAIN BENEFITS YOU GET FROM OUR COMPANY :</h3>  
+<p class="p1"> Life Time Validity.</p>  
+<p class="p2">Training by Java Professionals.</p>  
+<p class="p3">Small Batches to focus on each student.</p>  
+</body>  
+</html>  
+
+
+<!-- Now create a file named "simple.less". It is similar 
+ to CSS file. The only one difference is that it is saved with ".less" extension.
+
+Less file: simple.less -->
+
+<!-- .p1{  
+    color:brown;  
+  }  
+  .p2{  
+    background : lightgreen;  
+    .p1();  
+  }  
+  .p3{  
+     background : lightgrey;  
+    .p1;  
+  }    -->
+
+
+  <!-- The generated CSS "simple.css", has the following code:
+
+.p1 {  
+  color: brown;  
+}  
+.p2 {  
+  background: lightgreen;  
+  color: brown;  
+}  
+.p3 {  
+  background: lightgrey;  
+  color: brown;  
+}   -->

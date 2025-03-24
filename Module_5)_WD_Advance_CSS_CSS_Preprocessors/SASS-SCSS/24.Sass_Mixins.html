@@ -1,0 +1,31 @@
+<!-- SCSS Syntax: -->
+
+<!-- @mixin border-radius($radius) {  
+    -webkit-border-radius: $radius;  
+       -moz-border-radius: $radius;  
+        -ms-border-radius: $radius;  
+            border-radius: $radius;  
+  }  
+  .box { @include border-radius(10px); }    -->
+
+<!-- Equivalent Sass Syntax: -->
+<!-- =border-radius($radius)  
+  -webkit-border-radius: $radius  
+  -moz-border-radius:    $radius  
+  -ms-border-radius:     $radius  
+  border-radius:         $radius  
+.box  
+  +border-radius(10px)   -->
+
+<!-- Here, we use the mixin directive and give it a name border-radius.
+ A variable $radius is used inside the parentheses to pass a radius
+  according to or need. After creating the mixin you can use it as
+   a CSS declaration. It starts with @include followed by the name 
+   of the mixin. The generated CSS will look like this: -->
+
+   <!-- .box {  
+    -webkit-border-radius: 10px;  
+    -moz-border-radius: 10px;  
+    -ms-border-radius: 10px;  
+    border-radius: 10px;  
+  }    -->

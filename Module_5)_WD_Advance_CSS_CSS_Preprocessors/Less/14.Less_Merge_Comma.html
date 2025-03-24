@@ -1,0 +1,29 @@
+<!-- HTML file: simple.html -->
+<!DOCTYPE html>  
+<head>  
+   <title>Merge Comma Example</title>  
+   <link rel="stylesheet" href="./Css/style.css" type="text/css" />  
+</head>  
+<body>  
+   <h2>Example of Merge Comma</h2>  
+   <p class="class">Welcome to JavaTpoint: A solution of all technology.</p>  
+</body>  
+</html>  
+
+<!-- Now create a file named "simple.less". It is similar to CSS file. 
+The only one difference is that it is saved with ".less" extension. -->
+
+<!-- Less file: simple.less, -->
+<!-- .myfunc() {  
+    box-shadow+: 5px 5px 5px grey;  
+  }  
+  .class {  
+    .myfunc();  
+    box-shadow+: 0 0 5px #f78181;  
+  }   -->
+
+<!-- The generated CSS "simple.css", has the following code:
+
+.class {  
+  box-shadow: 5px 5px 5px grey, 0 0 5px #f78181;  
+}    -->

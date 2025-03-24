@@ -1,0 +1,7 @@
+.cont(@count) when (@count > 0) {
+  .cont((@count - 1));
+  width: (25px * @count);
+}
+div {
+  .cont(7);
+}

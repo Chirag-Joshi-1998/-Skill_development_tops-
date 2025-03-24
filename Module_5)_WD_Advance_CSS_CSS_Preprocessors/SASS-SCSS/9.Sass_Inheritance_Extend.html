@@ -1,0 +1,59 @@
+<!-- SCSS Syntax: -->
+<!-- .message {  
+    border: 1px solid #ccc;  
+    padding: 10px;  
+    color: #333;  
+  }  
+  .success {  
+    @extend .message;  
+    border-color: green;  
+  }  
+  .error {  
+    @extend .message;  
+    border-color: red;  
+  }  
+  .warning {  
+    @extend .message;  
+    border-color: yellow;  
+  }   -->
+
+
+<!-- Equivalent Sass Syntax: -->
+<!-- .message  
+  border: 1px solid #ccc  
+  padding: 10px  
+  color: #333  
+.success  
+  @extend .message  
+  border-color: green  
+.error  
+  @extend .message  
+  border-color: red  
+.warning  
+  @extend .message  
+  border-color: yellow    -->
+
+
+<!-- When the above code is processed, it takes the CSS properties in 
+.message and applies them to .success, .error, & .warning. 
+The generated CSS facilitates you to avoid writing multiple class 
+names on HTML elements. It looks like this: -->
+
+
+<!-- CSS Syntax: -->
+
+
+<!-- .message, .success, .error, .warning {  
+    border: 1px solid #cccccc;  
+    padding: 10px;  
+    color: #333;  
+  }  
+  .success {  
+    border-color: green;  
+  }  
+  .error {  
+    border-color: red;  
+  }  
+  .warning {  
+    border-color: yellow;  
+  }   -->

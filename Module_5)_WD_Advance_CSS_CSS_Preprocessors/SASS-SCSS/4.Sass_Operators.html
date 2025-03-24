@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sass Operators</title>
+    <style>
+      /* SCSS Syntax: */
+      /* .container {
+              width: 100%;
+            }
+            aside[role="main"] {
+              float: left;
+              width: 600px / 960px * 100%;
+            }
+            aside[role="complementary"] {
+              float: right;
+              width: 300px / 960px * 100%;
+            } */
+
+      /* .container
+        width: 100%
+      aside[role="main"]
+        float: left
+        width: 600px / 960px * 100%
+      aside[role="complementary"]
+        float: right
+        width: 300px / 960px * 100% */
+
+      /* It will generate CSS like this: */
+      /* .container {
+        width: 100%;
+      }
+      aside[role="main"] {
+        float: left;
+        width: 62.5%;
+      }
+      aside[role="complementary"] {
+        float: right;
+        width: 31.25%;
+      } */
+      /* Important Facts: */
+      /* 1.The addition ( + ) operator can also be used to concatenate
+       strings but it will work only for numbers with compatible units. */
+      /* h2 {
+        font-size: 15px + 2em; // Show error due to incompatible units
+        font-size: 15px + 2; // 17px
+      } */
+
+      /* 2.Multiplication of two numbers of the same unit is not valid CSS: */
+      /* h2 {  
+    font-size: 5px * 2px; // invalid CSS  
+}    */
+      /* 3.The division operator is an integral part of the CSS shorthand properties. */
+      /* font: 16px / 24px Arial sans-serif;  
+background: url("http://example.com") no-repeat fixed center / cover;    */
+
+      /* But Sass prefers forward slash (/) to perform the division operation.
+ Let?s take an example to see how Sass understands this symbol. */
+      /* h2 {  
+    font-size: 16px / 24px // Outputs as CSS  
+    font-size: (16px / 24px) // Uses parentheses, does division  
+    font-size: #{$base-size} / #{$line-height}; // Uses interpolation, outputs as CSS  
+    font-size: $base-size / $line-height // Uses variables, does division  
+    opacity: random(4) / 5; // Uses a function, does division  
+    padding-right: 2px / 4px + 3px // Uses an arithmetic expression, does division  
+}    */
+
+      /* Sass follows operator precedence according to BODMAS formula.
+Expressions within parentheses are evaluated first.
+The multiplication (*) and division (/) operators have a higher
+ priority than the addition (+) and subtraction operators (-). */
+
+      /* Sass follows operator precedence according to BODMAS formula.
+Expressions within parentheses are evaluated first.
+The multiplication (*) and division (/) operators have a higher priority than the addition (+) and subtraction operators (-). */
+
+      /* h2 {  
+     width: 3px * 5 + 5px; // 20px  
+     width: 3 * (5px + 5px); // 30px  
+     width: 3px + (6px / 2) * 3; // 12px  
+ }    */
+
+      /* 3) Equality Operator */
+      /* See this example: */
+      /* @mixin font-fl($font) {
+        &:after {
+          @if (type-of($font) == string) {
+            content: "My font is: #{$font}.";
+          } @else {
+            content: "Sorry, the argument #{$font} is a #{type-of($font)}.";
+          }
+        }
+      }
+      h2 {
+        @include font-fl(sans-serif);
+      } */
+      /* The generated CSS will have the following code: */
+      /* h2:after {
+        content: "My font is: sans-serif.";
+      } */
+
+      /* The second example defines a list and checks the length of its
+       items. Here, remainder (%) operator is used to evaluate their 
+       length and then set the color property to the h2 element. */
+
+      /* See this example: */
+      /* $list: "red", "yellow", "lightblue";
+      @mixin fg-color($property) {
+        @each $item in $list {
+          $color-length: str-length($item);
+          @if ($color-length % 2 != 0) {
+            #{$property}: unquote($item);
+          }
+        }
+      }
+      h2 {
+        @include fg-color(color);
+      } */
+      /* The generated CSS will have the following code: */
+      /* h2 {  
+    color: lightblue;  
+}    */
+      /* Note: Sass doesn't support the strict equality operator (===) like other languages. */
+
+      /* 4) Comparison Operator
+Comparison operators are similar to equality operators but they 
+are only used to compare numbers. */
+
+      /* See this example: */
+      /* $padding: 50px;  
+h2 {  
+    @if($padding <= 20px) {  
+        padding: $padding;  
+    } @else {  
+        padding: $padding / 2;  
+    }  
+}   */
+
+      /* After the compilation, the resulting CSS will have the following code. */
+      /* h2 {  
+  padding: 25px;  
+}    */
+
+      /* 5) Logical Operators */
+      /* $list-map: (
+        success: lightgreen,
+        alert: red,
+        info: lightblue,
+      );
+      @mixin button-state($btn-state) {
+        @if (length($list-map) > 2 or length($list-map) < 5) {
+          background-color: map-get($list-map, $btn-state);
+        }
+      }
+      .btn {
+        @include button-state(success);
+      } */
+
+      /* .btn {  
+    background-color: lightgreen;  
+}    */
+    </style>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>hello</h1>
+    </div>
+
+    <aside role="main">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ratione
+      recusandae, beatae quod nulla maxime. Eos corrupti, dolores consequatur in
+      non labore optio fugit! Quisquam atque reprehenderit officia omnis
+      aperiam.
+    </aside>
+    <aside role="complementary">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dicta totam
+      et vitae magni voluptatem velit nisi commodi laudantium dolorem, quasi
+      dolore soluta in obcaecati, sed voluptas asperiores aut. Delectus.
+    </aside>
+    <h2>hi</h2>
+  </body>
+</html>
