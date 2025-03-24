@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head><title>tops</title>
+	</head>
+	<body>
+		<script> 
+		/*
+			var LRA = [[], [], []];
+			LRA[0][0] = "Rahul";
+			LRA[0][1] = "Dell";
+			LRA[0][2] = 10;
+			LRA[1][0] = "Sonam";
+			LRA[1][1] = "HP";
+			LRA[1][2] = 20;
+			LRA[2][0] = "Sumit";
+			LRA[2][1] = "Zed";
+			LRA[2][2] = 30;
+		*/
+		// Using Array Literal
+			var LRA = [
+							["Rahul", "Dell", 10], 
+							["Sonam", "HP", 20], 
+							["Sumit", "Zed", 30]
+						];
+			
+			
+			// using Array Constructor
+			// var LRA = new Array(["Rahul", "Dell", 10], ["Sonam", "HP", 20], ["Sumit", "Zed", 30]);
+						
+			for(let i =0; i<3; i++){
+				for(let j =0; j<3; j++){
+					// document.write(LRA[i][j] + " ");
+					document.write( i + " " + j + " " + LRA[i][j] + " ");
+				}
+				document.write("<br>")
+			}
+			
+		</script>
+	</body>
+</html>
+
+
