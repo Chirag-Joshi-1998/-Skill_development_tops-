@@ -1,0 +1,614 @@
+SQL Constraints - Types of Constraints (NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY),
+Implementing Constraints in Tables
+NOT NULL:
+this feild not empty 
+
+Check :
+age must be 14 or above
+Check(age>=14)
+
+UNIQUE, 
+avoid duplicacy entry, dupicate data not Add
+PRIMARY KEY, 
+primary key always unique data 
+A primary key cannot have null value (diff btw unique and primary)
+A table can contain only one PRIMARY KEY constraint. (diff btw unique and primary)
+FOREIGN KEY
+A FOREIGN KEY is a key used to link two tables together. 
+A FOREIGN KEY in one table used to point PRIMAry KEY in Another Table 
+
+• Main SQL Commands and Sub-commands - Data Definition Language (DDL), CREATE
+Command, Creating Tables, Specifying Column Names, Data Types, and Constraints
+
+
+CREATE DATABASE Statement
+Show databases;
+
+Use databasename;
+
+Select database();
+
+
+Status;
+
+
+CREATE DATABASE databasename;
+
+
+DROP DATABASE Statement
+DROP DATABASE databasename;
+
+
+
+CREATE TABLE Statement
+CREATE TABLE table_name (
+    column1 datatype,
+    column2 datatype,
+    column3 datatype,
+   ....
+);
+
+Example ::
+
+CREATE TABLE Students(
+    Rollno int,
+    FirstName varchar(255),
+    LastName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
+Create Table Using Another Table
+CREATE TABLE new_table_name AS
+    SELECT column1, column2,...
+    FROM existing_table_name
+    WHERE ....;
+Example
+CREATE TABLE Otherstudents AS
+SELECT firstname, lastname
+FROM students;
+
+ DROP TABLE Statement
+DROP TABLE table_name;
+Example
+DROP TABLE students;
+TRUNCATE TABLE
+The TRUNCATE TABLE statement is used to delete the data inside a table, but not the table itself.
+
+TRUNCATE TABLE table_name;
+
+
+Example
+TRUNCATE TABLE students;
+
+
+INSERT DATA INTO TABLE Statement
+Syntax
+1. Specify both the column names and the values to be inserted:
+
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+
+2. If you are adding values for all the columns of the table, you do not need to specify the column names in the SQL query. However, make sure the order of the values is in the same order as the columns in the table. Here, the INSERT INTO syntax would be as follows:
+INSERT INTO table_name
+VALUES (value1, value2, value3, ...);
+
+INSERT INTO Example
+INSERT INTO Students(RollNo,FirstName,LastName,Address, City)
+VALUES(101,'Chirag', 'Joshi', 'Ghatlodiya', 'Ahmdabad');
+
+Insert Data Only in Specified Columns
+INSERT INTO Students (FirstName,LastName,Address, City)
+VALUES ('Chirag', 'Joshi', 'Ghatlodiya', 'Ahmdabad');
+
+For Dummy Data Link
+https://www.plus2net.com/sql_tutorial/sql_student_dump.php
+SELECT Statement
+Syntax
+For All column data 
+
+SELECT  * FROM table_name;
+
+Example
+
+Select * from Students;
+
+For specific column 
+
+syntax:
+
+SELECT column1, column2, ...
+FROM table_name;
+
+Example 
+
+SELECT FirstName,LastName,Address FROM Students;
+
+
+NOT NULL on CREATE TABLE
+
+The following SQL ensures that the "RollNo", "LastName", and "FirstName" columns will NOT accept NULL values when the "Students" table is created:
+
+CREATE TABLE Students(
+	RollNo int NOT NULL,
+    LastName varchar(255) NOT NULL,
+	FirstName varchar(255) NOT NULL,
+	Age int
+);
+
+UNIQUE Constraint
+
+The UNIQUE constraint ensures that all values in a column are different.
+Both the UNIQUE and PRIMARY KEY constraints provide a guarantee for uniqueness for a column or set of columns.
+
+A PRIMARY KEY constraint automatically has a UNIQUE constraint.
+
+CREATE TABLE test(
+	ID int NOT NULL,
+	LastName varchar(255) NOT NULL,
+	FirstName varchar(255),
+	Age int,
+    UNIQUE (ID)
+	
+);
+
+PRIMARY KEY Constraint
+
+
+The PRIMARY KEY constraint uniquely identifies each record in a table.
+
+Primary keys must contain UNIQUE values, and cannot contain NULL values.
+
+A table can have only ONE primary key; and in the table, this primary key can consist of single or multiple columns (fields).
+
+CREATE TABLE Employee(
+	ID int NOT NULL,
+	LastName varchar(255) NOT NULL,
+	FirstName varchar(255),
+	Age int,
+    PRIMARY KEY (ID)
+);
+FOREIGN KEY Constraint
+The FOREIGN KEY constraint is used to prevent actions that would destroy links between tables.
+
+A FOREIGN KEY is a field (or collection of fields) in one table, that refers to the PRIMARY KEY in another table.
+
+The table with the foreign key is called the child table, and the table with the primary key is called the referenced or parent table.
+
+Notice that the "EmployeeID" column in the "Salary" table points to the "EmployeeID" column in the "Employee" table.
+
+The "EmployeeID" column in the "Salary" table is the PRIMARY KEY in the "Salary" table.
+
+The "EmployeeID" column in the "salary" table is a FOREIGN KEY in the "salary" table.
+
+The FOREIGN KEY constraint prevents invalid data from being inserted into the foreign key column, because it has to be one of the values contained in the parent table.
+
+CREATE TABLE Salary(
+	SalaryID int NOT NULL,
+	OrderNumber int NOT NULL,
+	ID int,
+    PRIMARY KEY (ID),
+    FOREIGN KEY (ID ) REFERENCES Employee(ID)
+);
+
+
+ALTER Command - Modifying Existing Tables, Adding, Modifying, or Dropping Columns
+
+NOT NULL on ALTER TABLE
+ALTER TABLE Students
+MODIFY Age int NOT NULL;
+
+
+CREATE TABLE Person(
+    Personid int NOT NULL AUTO_INCREMENT,
+	LastName varchar(255) NOT NULL,
+	FirstName varchar(255),
+	Age int,
+    
+);
+
+DROP a PRIMARY KEY Constraint
+ALTER TABLE test
+DROP PRIMARY KEY
+
+DROP a FOREIGN KEY Constraint
+ALTER TABLE Orders
+DROP FOREIGN KEY FK_PersonOrder;
+
+NOT NULL on ALTER TABLE
+ALTER TABLE Students
+MODIFY Age int NOT NULL;
+
+ALTER TABLE Student
+ADD State  VARCHAR(30);
+
+SELECT * FROM Student;
+
+
+ DROP TABLE Statement
+DROP TABLE table_name;
+Example
+DROP TABLE students;
+
+DROP a PRIMARY KEY Constraint
+ALTER TABLE test
+DROP PRIMARY KEY
+
+DROP a FOREIGN KEY Constraint
+ALTER TABLE students;
+DROP FOREIGN KEY FK_PersonOrder;
+
+ALTER TABLE students;
+DROP COLUMN ContactName;
+
+
+Data Manipulation Language (DML) - INSERT Command, Adding Data into Tables Specifying
+Column Names and Values
+
+
+INSERT DATA INTO TABLE Statement
+Syntax
+1. Specify both the column names and the values to be inserted:
+
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+
+2. If you are adding values for all the columns of the table, you do not need to specify the column names in the SQL query. However, make sure the order of the values is in the same order as the columns in the table. Here, the INSERT INTO syntax would be as follows:
+INSERT INTO table_name
+VALUES (value1, value2, value3, ...);
+
+INSERT INTO Example
+INSERT INTO Students(RollNo,FirstName,LastName,Address, City)
+VALUES(101,'Chirag', 'Joshi', 'Ghatlodiya', 'Ahmdabad');
+
+Insert Data Only in Specified Columns
+
+INSERT INTO Students (FirstName,LastName,Address, City)
+VALUES ('Chirag', 'Joshi', 'Ghatlodiya', 'Ahmdabad');
+
+
+
+UPDATE Command - Modifying Existing Data in Tables, Changing Values in Specific Columns
+
+UPDATE Syntax
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+
+UPDATE Students
+SET FirstName= 'TEst1', City= 'Bhavnagar'
+WHERE CustomerID = 1;
+
+
+DELETE Command - Removing Data from Tables, Deleting Specific Rows with WHERE Clause
+
+The DELETE statement is used to delete existing records in a table.
+
+Syntax
+DELETE FROM table_name WHERE condition;
+
+ Example
+DELETE FROM Students WHERE FirstName='keyurrrr';
+
+Delete All Records
+DELETE FROM Students;
+
+ LIMIT Clause
+The LIMIT clause is used to specify the number of records to return.
+The LIMIT clause is useful on large tables with thousands of records. Returning a large number of records can impact performance.
+
+Syntax
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+LIMIT number;
+Examples
+SELECT * FROM Student
+LIMIT 3;
+
+SELECT * FROM Student
+WHERE  gender='MALE'
+LIMIT 10;
+
+ Data Query Language (DQL) - SELECT Command, Retrieving Data from Tables, Filtering Data
+with WHERE Clause, Sorting Data with ORDER BY Clause, Limiting Results with LIMIT or
+FETCH FIRST Clause
+
+
+
+SELECT CustomerName, City FROM Customers;
+
+SELECT * FROM Customers;
+
+Filtering Data
+with WHERE Clause,
+
+SELECT * FROM Customers
+WHERE Country='Mexico';
+
+SELECT * FROM Customers
+WHERE CustomerID=1;
+
+SELECT * FROM Customers
+WHERE CustomerID > 80;
+
+Sorting Data with ORDER BY Clause,
+
+SELECT * FROM Products
+ORDER BY Price;
+
+SELECT * FROM Products
+ORDER BY Price DESC;
+
+
+Limiting Results with LIMIT or
+FETCH FIRST Clause
+
+
+
+SELECT TOP 3 * FROM Customers;
+
+SELECT * FROM Customers
+LIMIT 3;
+
+
+SELECT * FROM Customers
+FETCH FIRST 3 ROWS ONLY;
+
+
+Data Control Language (DCL) -GRANT Command, Granting Privileges to Users or Roles,
+Granting SELECT, INSERT, UPDATE, DELETE Permissions
+
+
+Example 1: MySQL Create Single User
+CREATE USER chirag@localhost IDENTIFIED BY 'chirag';
+
+Granting Privileges to Users or Roles,
+Granting SELECT, INSERT, UPDATE, DELETE Permissions
+
+mysql> CREATE USER
+    -> 'deep@localhost' IDENTIFIED BY 'deep';
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> GRANT SELECT, INSERT, DELETE, UPDATE ON  persons TO 'deep@localhost';
+Query OK, 0 rows affected (0.01 sec)
+
+
+
+3. Granting All Privileges
+mysql> GRANT ALL ON persons TO 'deep@localhost';
+Query OK, 0 rows affected (0.01 sec)
+
+ REVOKE Command - Revoking Privileges from Users or Roles, Removing SELECT, INSERT,
+UPDATE, DELETE Permissions
+
+
+Various Ways of Revoking Privileges From a User
+1. Revoking SELECT Privilege
+
+mysql> REVOKE SELECT ON  persons FROM 'deep@localhost';
+Query OK, 0 rows affected (0.01 sec)
+
+2. Revoking Multiple Privileges
+
+mysql> REVOKE SELECT, INSERT, DELETE, UPDATE ON Users FROM 'deep@localhost';
+Query OK, 0 rows affected (0.01 sec) 
+
+3. Revoking All Privileges
+mysql> REVOKE ALL ON persons  FROM 'deep@localhost';
+Query OK, 0 rows affected (0.01 sec)
+
+
+• Transaction Control Language (TCL) - COMMIT Command, Saving Changes Permanently to the
+Database
+
+1. COMMIT
+
+
+TCL Full Form - Transaction Control Language
+DML Full Form - Data Manipulation Language
+Transaction Control in DBMS
+SQL Full Form - Structured Query Language
+Transaction Management
+How to Decode Input Data from a Transaction?
+Two Phase Commit Protocol (Distributed Transaction Management)
+Introduction to Transaction Processing
+JCL (Job Control Language)
+Atomic Transactions in OS
+Concurrency Control in Distributed Transactions
+Concurrency problems in DBMS Transactions
+Serialising a Bitcoin Transaction
+Programmatic Transaction Management in Spring
+What is TCP (Transmission Control Protocol)?
+Transactions management in PostgreSQL Python
+Transaction Atomic With Django
+What is Transaction Processing Monitors (TPM)?
+PostgreSQL - Transactions
+Flat & Nested Distributed Transactions
+DSA to DevelopmentCourse
+TCL Full Form – Transaction Control Language
+Last Updated : 08 Jan, 2025
+Transaction Control Language (TCL) is a critical component of SQL used to manage transactions and ensure data integrity in relational databases. By using TCL commands, we can control how changes to the database are committed or reverted, maintaining consistency across multiple operations.
+
+In this article, We will learn about the TCL Full Form by understanding various examples and so on.
+
+What is the Full Form of TCL?
+TCL stands for Transaction Control Language.
+It’s a subset of SQL used to manage transactions in a database.
+TCL Commands
+TCL includes the following commands:
+
+1. COMMIT
+The COMMIT command is used to save all the transactions to the database that have been performed during the current transaction.
+Once a transaction is committed, it becomes permanent and cannot be undone.
+This command is typically used at the end of a series of SQL statements to ensure that all changes made during the transaction are saved. 
+Syntax:  
+
+COMMIT;
+
+ ROLLBACK Command - Reverting Uncommitted Changes, ?SAVEPOINT Command - Creating
+
+Intermediate Points in a Transaction for Rollback
+1. ROLLBACK 
+The ROLLBACK command is used to undo all the transactions that have been performed during the current transaction but have not yet been committed.
+
+
+3. SAVEPOINT
+The SAVEPOINT command is used to set a point within a transaction to which we can later roll back.
+This command allows for partial rollbacks within a transaction, providing more control over which parts of a transaction to undo.
+Syntax:  
+
+SAVEPOINT savepoint_name;
+
+
+SQL Joins
+
+SQL JOIN
+A JOIN clause is used to combine rows from two or more tables, based on a related column between them.
+
+Let's look at a selection from the "Orders" table:
+
+Notice that the "CustomerID" column in the "Orders" table refers to the "CustomerID" in the "Customers" table. The relationship between the two tables above is the "CustomerID" column.
+
+Then, we can create the following SQL statement (that contains an INNER JOIN), that selects records that have matching values in both tables:
+
+
+SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+FROM Orders
+INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
+
+SQL INNER JOIN
+
+SELECT ProductID, ProductName, CategoryName
+FROM Products
+INNER JOIN Categories ON Products.CategoryID = Categories.Catego
+
+Note: The INNER JOIN keyword returns only rows with a match in both tables. Which means that if you have a product with no CategoryID, or with a CategoryID that is not present in the Categories table, that record would not be returned in the result.
+
+SQL LEFT JOIN Keyword
+
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+ORDER BY Customers.CustomerName;
+
+The LEFT JOIN keyword returns all records from the left table (Customers), even if there are no matches in the right table (Orders).
+
+SQL RIGHT JOIN Keyword
+
+SELECT Orders.OrderID, Employees.LastName, Employees.FirstName
+FROM Orders
+RIGHT JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID
+ORDER BY Orders.OrderID;
+Note: The RIGHT JOIN keyword returns all records from the right table (Employees), even if there are no matches in the left table (Orders).
+
+SQL FULL OUTER JOIN Keyword
+Note: FULL OUTER JOIN can potentially return very large result-sets!
+
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+FULL OUTER JOIN Orders ON Customers.CustomerID=Orders.CustomerID
+ORDER BY Customers.CustomerName;
+
+Note: The FULL OUTER JOIN keyword returns all matching records from both tables whether the other table matches or not. So, if there are rows in "Customers" that do not have matches in "Orders", or if there are rows in "Orders" that do not have matches in "Customers", those rows will be listed as well.
+
+• Data Control Language (DCL) -GRANT Command, Granting Privileges to Users or Roles,
+Granting SELECT, INSERT, UPDATE, DELETE Permissions
+• REVOKE Command - Revoking Privileges from Users or Roles, Removing SELECT, INSERT,
+UPDATE, DELETE Permissions
+• Transaction Control Language (TCL) - COMMIT Command, Saving Changes Permanently to the
+Database
+• ROLLBACK Command - Reverting Uncommitted Changes, ?SAVEPOINT Command - Creating
+Intermediate Points in a Transaction for Rollback
+• SQL Joins - Inner Join, Left Join, Right Join, Full Outer Join
+
+
+
+
+The SQL GROUP BY Statement
+
+
+The SQL GROUP BY Statement
+The GROUP BY statement groups rows that have the same values into summary rows, like "find the number of customers in each country".
+
+The GROUP BY statement is often used with aggregate functions (COUNT(), MAX(), MIN(), SUM(), AVG()) to group the result-set by one or more columns.
+
+
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country;
+
+
+
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country
+ORDER BY COUNT(CustomerID) DESC;
+
+
+SQL Stored Procedure - Definition and Purpose of Stored Procedures, Creating and Executing
+Stored Procedures
+
+CREATE PROCEDURE SelectAllCustomers
+AS
+SELECT * FROM Customers
+GO;
+
+EXEC SelectAllCustomers;
+
+
+SQL View - Creating Views in SQL, Advantages of Using Views
+
+
+What is a View in SQL?
+
+In SQL, a view is a virtual table based on the result-set of an SQL statement.
+
+A view contains rows and columns, just like a real table. The fields in a view are fields from one or more real tables in the database.
+
+You can add SQL statements and functions to a view and present the data as if the data were coming from one single table.
+
+A view is created with the CREATE VIEW statement. 
+
+CREATE VIEW Customers AS
+SELECT CustomerName, ContactName
+FROM Customers
+WHERE Country = 'Brazil';
+
+SELECT * FROM Customers ;
+
+
+• SQL Trigger - Introduction to Triggers, Types of Triggers (INSERT, UPDATE, DELETE)
+What is SQL Trigger?
+SQL triggers are a critical feature in database management systems (DBMS) that provide automatic execution of a set of SQL statements when specific database events, such as INSERT, UPDATE, or DELETE operations, occur.
+
+
+CREATE TRIGGER prevent_table_creation
+ON DATABASE
+FOR CREATE_TABLE, ALTER_TABLE, DROP_TABLE
+AS 
+BEGIN
+   PRINT 'you can not create, drop and alter table in this database';
+   ROLLBACK;
+END;
+
+
+
+• Introduction to PL/SQL - Definition and Purpose of PL/SQL, Benefits of Using PL/SQL
+
+
+PL/SQL (Procedural Language/Structured Query Language) is a block-structured language developed by Oracle that allows developers to combine the power of SQL with procedural programming constructs. The PL/SQL language enables efficient data manipulation and control-flow logic, all within the Oracle Database.
+
+Basics of PL/SQL
+PL/SQL stands for Procedural Language extensions to the Structured Query Language (SQL).
+
+
+Features of PL/SQL
+1/PL/SQL is basically a procedural language, which provides the functionality of decision-making, iteration, and many more features of procedural programming languages.
+
+2.PL/SQL can execute a number of queries in one block using single command.
+
+3.One can create a PL/SQL unit such as procedures, functions, packages, triggers, and types, which are stored in the database for reuse by applications.
+
+4.PL/SQL provides a feature to handle the exception which occurs in PL/SQL block known as exception handling block.
+
+
