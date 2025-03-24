@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Table Border</title>
+  </head>
+  <!-- CSS Table Border -->
+
+  <!-- We can set border for the table, th and td tags using the CSS border property. -->
+  <!-- <style>  
+        table, th, td {  
+            border: 1px solid black;  
+        }  
+        </style>   -->
+  <!-- CSS Table Border Collapse -->
+  <!-- By the help of border-collapse property, we can collapse all borders in one border only. -->
+  <!-- <style>  
+            table, th, td {  
+                border: 2px solid black;  
+                border-collapse: collapse;  
+            }  
+            </style>   -->
+
+  <!-- CSS Table Padding -->
+  <!-- <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th,
+    td {
+      padding: 10px;
+    }
+  </style> -->
+  <!-- CSS Table: Styling even and odd cells -->
+  <!-- We can style even and odd table cells for better look and feel. In this code, we are displaying different background colors on even and odd cells. Moreover, 
+  we have changed the background-color and color of <th> tag. -->
+    <style>  
+        table, th, td {  
+            border: 1px solid black;  
+            border-collapse: collapse;  
+        }  
+        th, td {  
+            padding: 10px;  
+        }  
+        table#alter tr:nth-child(even) {  
+            background-color: #eee;  
+        }  
+        table#alter tr:nth-child(odd) {  
+            background-color: #fff;  
+        }  
+        table#alter th {  
+            color: white;  
+            background-color: gray;  
+        }  
+        </style>  
+
+        
+
+  <body>
+    <table id="alter">
+      <tr>
+        <th>RollNo</th>
+        <th>Name</th>
+        <th>Marks</th>
+      </tr>
+      <tr>
+        <td>101</td>
+        <td>chirag</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>101</td>
+        <td>chirag</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>101</td>
+        <td>chirag</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>101</td>
+        <td>chirag</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>101</td>
+        <td>chirag</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>101</td>
+        <td>chirag</td>
+        <td>90</td>
+      </tr>
+    </table>
+  </body>
+</html>

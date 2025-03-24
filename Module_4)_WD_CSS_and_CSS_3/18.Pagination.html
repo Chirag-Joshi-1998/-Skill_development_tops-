@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <style>
+      ul.pagination {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+      }
+      ul.pagination li {
+        display: inline;
+      }
+      ul.pagination li a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Basic Pagination</h2>
+    <ul class="pagination">
+      <li><a href="#">1</a></li>
+      <li><a class="active" href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">6</a></li>
+      <li><a href="#">7</a></li>
+    </ul>
+  </body>
+</html>
+
+<!-- Basic Pagination with arrow -->
+
+<!-- This pagination is used when you have lots of pages. 
+It facilitates you to use arrow for previous and next page. -->
+
+<!-- <!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+ul.pagination {  
+    display: inline-block;  
+    padding: 0;  
+    margin: 0;  
+}  
+ul.pagination li {display: inline;}  
+ul.pagination li a {  
+    color: black;  
+    float: left;  
+    padding: 8px 16px;  
+    text-decoration: none;  
+}  
+</style>  
+</head>  
+<body>  
+<h2>Basic Pagination with arrow</h2>  
+<ul class="pagination">  
+  <li><a href="#">?</a></li>  
+  <li><a href="#">1</a></li>  
+  <li><a class="active" href="#">2</a></li>  
+  <li><a href="#">3</a></li>  
+  <li><a href="#">4</a></li>  
+  <li><a href="#">5</a></li>  
+  <li><a href="#">6</a></li>  
+  <li><a href="#">7</a></li>  
+  <li><a href="#">?</a></li>  
+</ul>  
+</body>  
+</html>   -->
+
+<!-- Active/Current link and Hoverable Pagination -->
+<!-- This pagination is used when you want to highlight the 
+current page and change the color of each page-link when 
+you move the mouse over them. You have to use .active class,
+ and the :hover selector for this effect. -->
+
+ <!-- <!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+ul.pagination {  
+    display: inline-block;  
+    padding: 0;  
+    margin: 0;  
+}  
+ul.pagination li {display: inline;}  
+ul.pagination li a {  
+    color: black;  
+    float: left;  
+    padding: 8px 16px;  
+    text-decoration: none;  
+}  
+ul.pagination li a.active {  
+    background-color: brown;  
+    color: white;  
+}  
+ul.pagination li a:hover:not(.active) {background-color: lightpink;}  
+</style>  
+</head>  
+<body>  
+<h2>Active and Hoverable Pagination</h2>  
+<p>Move the mouse over the numbers.</p>  
+<ul class="pagination">  
+  <li><a href="#">?</a></li>  
+  <li><a href="#">1</a></li>  
+  <li><a href="#">2</a></li>  
+  <li><a  class="active" href="#">3</a></li>  
+  <li><a href="#">4</a></li>  
+  <li><a href="#">5</a></li>  
+  <li><a href="#">6</a></li>  
+  <li><a href="#">7</a></li>  
+  <li><a href="#">?</a></li>  
+</ul>  
+</body>  
+</html>   -->
+
+<!-- Rounded Active and Hoverable Pagination -->
+
+<!-- In this pagination, you use border-radius property to get 
+the rounded "active" and "hover" button. -->
+
+<!-- 
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+ul.pagination {  
+    display: inline-block;  
+    padding: 0;  
+    margin: 0;  
+}  
+ul.pagination li {display: inline;}  
+ul.pagination li a {  
+    color: black;  
+    float: left;  
+    padding: 8px 16px;  
+    text-decoration: none;  
+    border-radius: 5px;  
+}  
+ul.pagination li a.active {  
+    background-color: brown;  
+    color: white;  
+    border-radius: 5px;  
+}  
+ul.pagination li a:hover:not(.active) {background-color: lightpink;}  
+</style>  
+</head>  
+<body>  
+<h2>Rounded Active and Hover Buttons</h2>  
+<ul class="pagination">  
+  <li><a href="#">?</a></li>  
+  <li><a href="#">1</a></li>  
+  <li><a class="active" href="#">2</a></li>  
+  <li><a href="#">3</a></li>  
+  <li><a href="#">4</a></li>  
+  <li><a href="#">5</a></li>  
+  <li><a href="#">6</a></li>  
+  <li><a href="#">7</a></li>  
+  <li><a href="#">?</a></li>  
+</ul>  
+</body>  
+</html>   -->
+
+<!-- Bordered Pagination -->
+<!-- In this pagination, you use border property 
+to add borders to the pagination. -->
+
+<!-- <!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+ul.pagination {  
+    display: inline-block;  
+    padding: 0;  
+    margin: 0;  
+}  
+ul.pagination li {display: inline;}  
+ul.pagination li a {  
+    color: black;  
+    float: left;  
+    padding: 8px 16px;  
+    text-decoration: none;  
+    border: 1px solid black;  
+}  
+ul.pagination li a.active {  
+    background-color: brown;  
+    color: white;  
+    border: 1px solid grey;  
+}  
+ul.pagination li a:hover:not(.active) {background-color: lightpink;}  
+</style>  
+</head>  
+<body>  
+<h2>Bordered Pagination</h2>  
+<ul class="pagination">  
+  <li><a href="#">?</a></li>  
+  <li><a href="#">1</a></li>  
+  <li><a class="active" href="#">2</a></li>  
+  <li><a href="#">3</a></li>  
+  <li><a href="#">4</a></li>  
+  <li><a href="#">5</a></li>  
+  <li><a href="#">6</a></li>  
+  <li><a href="#">7</a></li>  
+  <li><a href="#">?</a></li>  
+</ul>  
+</body>  
+</html>   -->
+
+<!-- Rounded Border Pagination -->
+<!-- This pagination method is used to add rounded borders 
+to your first and last link of pagination. -->
+
+<!-- <!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+ul.pagination {  
+    display: inline-block;  
+    padding: 0;  
+    margin: 0;  
+}  
+ul.pagination li {display: inline;}  
+ul.pagination li a {  
+    color: black;  
+    float: left;  
+    padding: 8px 16px;  
+    text-decoration: none;  
+    border: 1px solid black;  
+}  
+.pagination li:first-child a {  
+    border-top-left-radius: 5px;  
+    border-bottom-left-radius: 5px;  
+}  
+.pagination li:last-child a {  
+    border-top-right-radius: 5px;  
+    border-bottom-right-radius: 5px;  
+}  
+ul.pagination li a.active {  
+    background-color: brown;  
+    color: white;  
+    border: 1px solid grey;  
+}  
+ul.pagination li a:hover:not(.active) {background-color: lightpink;}  
+</style>  
+</head>  
+<body>  
+<h2>Pagination with Rounded Borders</h2>  
+<ul class="pagination">  
+  <li><a href="#">?</a></li>  
+  <li><a href="#">1</a></li>  
+  <li><a class="active" href="#">2</a></li>  
+  <li><a href="#">3</a></li>  
+  <li><a href="#">4</a></li>  
+  <li><a href="#">5</a></li>  
+  <li><a href="#">6</a></li>  
+  <li><a href="#">7</a></li>  
+  <li><a href="#">?</a></li>  
+</ul>  
+</body>  
+</html>   -->
+
+<!-- Space Between Pagination -->
+
+<!-- The margin property is used to get the space between 
+the links in the pagination. -->
+<!-- 
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+ul.pagination {  
+    display: inline-block;  
+    padding: 0;  
+    margin: 0;  
+}  
+ul.pagination li {display: inline;}  
+ul.pagination li a {  
+    color: black;  
+    float: left;  
+    padding: 8px 16px;  
+    text-decoration: none;  
+    border: 1px solid black;  
+    margin: 0 4px;  
+}  
+ul.pagination li a.active {  
+    background-color: brown;  
+    color: white;  
+    border: 1px solid grey;  
+}  
+ul.pagination li a:hover:not(.active) {background-color: lightpink;}  
+</style>  
+</head>  
+<body>  
+<h2>Space Between Pagination</h2>  
+<ul class="pagination">  
+  <li><a href="#">?</a></li>  
+  <li><a href="#">1</a></li>  
+  <li><a class="active" href="#">2</a></li>  
+  <li><a href="#">3</a></li>  
+  <li><a href="#">4</a></li>  
+  <li><a href="#">5</a></li>  
+  <li><a href="#">6</a></li>  
+  <li><a href="#">7</a></li>  
+  <li><a href="#">?</a></li>  
+</ul>  
+</body>  
+</html>   -->
+
+<!-- Pagination Size -->
+<!-- You can change the size of the pagination by 
+using font-size property. -->
+
+<!-- <!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+ul.pagination {  
+    display: inline-block;  
+    padding: 0;  
+    margin: 0;  
+}  
+ul.pagination li {display: inline;}  
+ul.pagination li a {  
+    color: black;  
+    float: left;  
+    padding: 8px 16px;  
+    text-decoration: none;  
+    border: 1px solid black;  
+    font-size: 22px;  
+}  
+ul.pagination li a.active {  
+    background-color: brown;  
+    color: white;  
+    border: 1px solid grey;  
+}  
+ul.pagination li a:hover:not(.active) {background-color: lightpink;}  
+</style>  
+</head>  
+<body>  
+<h2>Pagination Size</h2>  
+<p>Change the font-size property to make the pagination smaller or bigger.</p>  
+<ul class="pagination">  
+  <li><a href="#">?</a></li>  
+  <li><a href="#">1</a></li>  
+  <li><a class="active" href="#">2</a></li>  
+  <li><a href="#">3</a></li>  
+  <li><a href="#">4</a></li>  
+  <li><a href="#">5</a></li>  
+  <li><a href="#">6</a></li>  
+  <li><a href="#">7</a></li>  
+  <li><a href="#">?</a></li>  
+</ul>  
+</body>  
+</html>   -->
+
+<!-- Centered Pagination -->
+<!-- You have to wrap a container element around it (like
+
+) and use text-align:center to put the pagination to the 
+center of the page. -->
+
+<!-- <!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+ul.pagination {  
+    display: inline-block;  
+    padding: 0;  
+    margin: 0;  
+}  
+ul.pagination li {display: inline;}  
+ul.pagination li a {  
+    color: black;  
+    float: left;  
+    padding: 8px 16px;  
+    text-decoration: none;  
+    border: 1px solid #ddd;  
+}  
+ul.pagination li a.active {  
+    background-color: brown;  
+    color: white;  
+    border: 1px solid grey;  
+}  
+ul.pagination li a:hover:not(.active) {background-color: lightpink;}  
+div.center {text-align: center;}  
+</style>  
+</head>  
+<body>  
+<h2>Centered Pagination</h2>  
+<div class="center">  
+  <ul class="pagination">  
+    <li><a href="#">?</a></li>  
+    <li><a href="#">1</a></li>  
+    <li><a class="active" href="#">2</a></li>  
+    <li><a href="#">3</a></li>  
+    <li><a href="#">4</a></li>  
+    <li><a href="#">5</a></li>  
+    <li><a href="#">6</a></li>  
+    <li><a href="#">7</a></li>  
+    <li><a href="#">?</a></li>  
+  </ul>  
+</div>  
+</body>  
+</html>   -->
+
+<!-- Previous/Next and Navigation Pagination -->
+<!-- You can add pagination for previous/next button and also 
+for navigation. -->
+
+<!-- <!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+ul.pagination {  
+    display: inline-block;  
+    padding: 0;  
+    margin: 0;  
+}  
+ul.pagination li {display: inline;}  
+ul.pagination li a {  
+    color: black;  
+    float: left;  
+    padding: 8px 16px;  
+    text-decoration: none;  
+    border: 1px solid black;  
+    font-size: 18px;  
+}  
+ul.pagination li a.active {  
+    background-color: brown;  
+    color: black;  
+    border: 1px solid black;  
+}  
+ul.pagination li a:hover:not(.active) {background-color: lightpink;}  
+</style>  
+</head>  
+<body>  
+<p><strong>Next/Previous buttons:</strong></p>  
+<ul class="pagination">  
+  <li><a href="#">?</a></li>  
+  <li><a href="#">?</a></li>  
+</ul>  
+<p><strong>Navigation pagination:</strong></p>  
+<ul class="pagination">  
+  <li><a href="#" class="active">Home</a></li>  
+  <li><a href="#">Link 1</a></li>  
+  <li><a href="#">Link 2</a></li>  
+  <li><a href="#">Link 3</a></li>  
+</ul>  
+</body>  
+</html>   -->
+
+<!-- Breadcrumb Pagination -->
+<!-- A special type of pagination is called breadcrumb pagination. -->
+
+<!-- <!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+ul.breadcrumb {  
+    padding: 8px 16px;  
+    list-style: none;  
+    background-color: #eee;  
+}  
+ul.breadcrumb li {display: inline;}  
+ul.breadcrumb li+li:before {  
+    padding: 8px;  
+    color: black;  
+    content: "/\00a0";  
+}  
+ul.breadcrumb li a {color: green;}  
+</style>  
+</head>  
+<body>  
+<h2>JavaTpoint</h2>  
+<ul class="breadcrumb">  
+  <li><a href="#">Java</a></li>  
+  <li><a href="#">Oracle</a></li>  
+  <li><a href="#">PHP</a></li>  
+  <li>AngularJS</li>  
+</ul>  
+<p><strong>Note:</strong>This is an example of Breadcrumb pagination.</p>  
+</body>  
+</html>   -->
+
+
+
+

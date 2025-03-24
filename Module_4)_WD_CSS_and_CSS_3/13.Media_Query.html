@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Query</title>
+    <style>
+      /* @media only screen and (min-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+@media only screen and (min-width: 800px) {
+  body {
+    background-color: greenyellow;
+  }
+} */
+     
+
+      /* ===================min==================================== */
+       /* .device{
+  font-size: 72px;
+  text-align: center;
+  background-color: red;
+  color: white;
+  display: none;
+}
+
+@media(min-width: 300px) {
+  #device-1 {
+    display: block;
+    background-color: cyan;
+  }
+  
+}
+
+@media (min-width: 500px){
+  #device-2 {
+    display: block;
+    background-color: blueviolet;
+  }
+}
+
+@media (min-width: 800px){
+  #device-3 {
+    display: block;
+    color: black;
+    background-color: yellow;
+  }
+}
+
+@media (min-width: 1000px) {
+  #device-4 {
+    display: block;
+    color: black;
+    background-color: yellow;
+  }
+}
+
+@media (min-width: 1200px){
+  #device-5{
+    display: block;
+    color: green;
+    background-color: black;
+  }
+}  */
+      /* ===========================max========================= */
+/* 
+     .device{
+  font-size: 72px;
+  text-align: center;
+  background-color: red;
+  color: white;
+  display: none;
+}
+
+@media(max-width: 300px) {
+  #device-1 {
+    display: block;
+    background-color: cyan;
+  }
+}
+  
+@media (max-width: 500px){
+  #device-2 {
+    display: block;
+    background-color: blueviolet;
+  }
+}
+
+@media (max-width: 800px){
+  #device-3 {
+    display: block;
+    color: black;
+    background-color: yellow;
+  }
+}
+
+@media (max-width: 1000px) {
+  #device-4 {
+    display: block;
+    color: black;
+    background-color: yellow;
+  }
+}
+@media (max-width: 1200px){
+  #device-5{
+    display: block;
+    color: green;
+    background-color: black;
+  }
+}  */
+
+      /* ==============min and max========================= */
+       /* .device{
+  font-size: 72px;
+  text-align: center;
+  background-color: red;
+  color: white;
+  display: none;
+}
+
+@media(max-width:280px) {
+  #device-1 {
+    display: block;
+    background-color: cyan;
+  }
+}
+
+@media (min-width: 281px) and (max-width: 500px) {
+  #device-2 {
+    display: block;
+    background-color: blueviolet;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 800px) {
+  #device-3 {
+    display: block;
+    color: black;
+    background-color: yellow;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1000px) {
+  #device-4 {
+    display: block;
+    color: black;
+    background-color: yellow;
+  }
+}
+
+@media (min-width: 1000px){
+  #device-5{
+    display: block;
+    color: green;
+    background-color: black;
+  }
+} */
+
+      /* media types in css */
+      /* https://www.w3.org/TR/CSS21/media.html%23media-types */
+
+      .device{
+  font-size: 72px;
+  text-align: center;
+  background-color: red;
+  color: white;
+  display: none;
+}
+
+@media only screen and (max-width: 300px) {
+  #device-1 {
+    display: block;
+    background-color: cyan;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+  #device-2 {
+    display: block;
+    background-color: blueviolet;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 800px) {
+  #device-3 {
+    display: block;
+    color: black;
+    background-color: yellow;
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+  #device-4 {
+    display: block;
+    color: black;
+    background-color: yellow;
+  }
+}
+@media only screen and (min-width: 1000px){
+  #device-5{
+    display: block;
+    color: green;
+    background-color: black;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <div class="device" id="device-1">This is iphone</div>
+    <div class="device" id="device-2">This is Ipad</div>
+    <div class="device" id="device-3">This is IpadAir</div>
+    <div class="device" id="device-4">This is Desktop</div>
+    <div class="device" id="device-5">This is Other</div>
+  </body>
+</html>

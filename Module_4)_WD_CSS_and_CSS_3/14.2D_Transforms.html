@@ -1,0 +1,247 @@
+<!-- The translate() method -->
+
+<!-- <!DOCTYPE html>  
+<html>  
+<head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">  
+<style>  
+div {  
+    width: 300px;  
+    height: 100px;  
+    background-color: lightgreen;  
+    border: 1px solid black;  
+    -ms-transform: translate(100px,80px); /* IE 9 */  
+    -webkit-transform: translate(100px,80px); /* Safari */  
+    transform: translate(100px,80px); /* Standard syntax */  
+}  
+</style>  
+</head>  
+<body>  
+<div>  
+This div element is translated 50 pixels right, and 100 pixels down from its current position by using translate () method.  
+</div>  
+</body>  
+</html>   -->
+
+<!-- The rotate() method -->
+<!-- The CSS rotate() method is used to rotate an element 
+clockwise or anti-clockwise according to the given degree.
+
+Let's take an example to rotate a
+
+element by 300. -->
+
+<!-- 
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+div {  
+    width: 300px;  
+    height: 100px;  
+    background-color: lightpink;  
+    border: 1px solid black;  
+}  
+div#myDiv {  
+    -ms-transform: rotate(30deg); /* IE 9 */  
+    -webkit-transform: rotate(30deg); /* Safari */  
+    transform: rotate(30deg); /* Standard syntax */  
+}  
+</style>  
+</head>  
+<body>  
+<div>  
+This a normal div element.  
+</div>  
+<div id="myDiv">  
+This is the 30 degree clockwise rotated div element by using rotate() method.    
+</div>  
+</body>  
+</html>   -->
+
+<!-- The scale() method -->
+<!-- The CSS scale() method is used to increase or decrease 
+the size of an element according to the given width and height.
+
+Let's take an example to increase the size of an
+
+element by increasing its width and height two times.
+strong>See this example: -->
+
+<!-- 
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+div {  
+    margin: 150px;  
+    width: 200px;  
+    height: 100px;  
+    background-color: lightpink;  
+    border: 1px solid black;  
+    border: 1px solid black;  
+    -ms-transform: scale(2.5,2); /* IE 9 */  
+    -webkit-transform: scale(2.5,2); /* Safari */  
+    transform: scale(2.5,2); /* Standard syntax */  
+}  
+</style>  
+</head>  
+<body>  
+<div>  
+This div element is scaled 2.5 times of its original width, and 2 times of its original height.  
+</div>  
+</body>  
+</html>   -->
+
+<!-- The skewX() method -->
+
+<!-- The CSS skewX() method is used to skew an element along 
+the X axis according to the given angle. Let?s take an example
+ to skew an
+
+element 30 degrees along the X-axis. -->
+
+<!-- <!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+div {  
+    width: 300px;  
+    height: 100px;  
+    background-color: lightpink;  
+    border: 1px solid black;  
+}  
+div#myDiv {  
+    -ms-transform: skewX(30deg); /* IE 9 */  
+    -webkit-transform: skewX(30deg); /* Safari */  
+    transform: skewX(30deg); /* Standard syntax */  
+}  
+</style>  
+</head>  
+<body>  
+<div>  
+This a normal div element.  
+</div>  
+<div id="myDiv">  
+This div element is skewed 30 degrees along the X-axis.  
+</div>  
+</body>  
+</html>   -->
+
+<!-- The skewY() method -->
+
+<!-- The CSS skewY() method is used to skew an element 
+along the Y axis according to the given angle. Let's
+ take an example to skew an
+
+element 30 degrees along the Y-axis. -->
+
+<!-- <!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+div {  
+    width: 300px;  
+    height: 100px;  
+    background-color: lightpink;  
+    border: 1px solid black;  
+}  
+div#myDiv {  
+    -ms-transform: skewY(30deg); /* IE 9 */  
+    -webkit-transform: skewY(30deg); /* Safari */  
+    transform: skewY(30deg); /* Standard syntax */  
+}  
+</style>  
+</head>  
+<body>  
+<div>  
+This a normal div element.  
+</div>  
+<div id="myDiv">  
+This div element is skewed 30 degrees along the Y-axis.  
+</div>  
+</body>  
+</html>   -->
+
+<!-- The skew() method -->
+
+<!-- The CSS skew() method is used to skew an element along with X-axis
+ and Y-axis according to the given angle.
+
+Let's take a <div> element and skew it 30 degree along the 
+    X-axis and 20 degree along the Y-axis. -->
+
+<!-- <!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+div {  
+    width: 300px;  
+    height: 100px;  
+    background-color: lightpink;  
+    border: 1px solid black;  
+}  
+div#myDiv {  
+    -ms-transform: skew(30deg,20deg); /* IE 9 */  
+    -webkit-transform: skew(30deg,20deg); /* Safari */  
+    transform: skew(30deg,20deg); /* Standard syntax */  
+}  
+</style>  
+</head>  
+<body>  
+<div>  
+This a normal div element.  
+</div>  
+<div id="myDiv">  
+This div element is skewed 30 degrees along the X-axis, and 20 degrees along the Y-axis.  
+</div>  
+</body>  
+</html>   -->
+
+
+<!-- The matrix() method -->
+<!-- The CSS matrix() method combines all the six 2D
+ transform methods altogether. It allows you to rotate, 
+ scale, translate, and skew elements. -->
+
+<!-- Syntax: -->
+<!-- The parameters of matrix method: matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY()) -->
+
+<!-- <!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+div {  
+    width: 300px;  
+    height: 100px;  
+    background-color: lightpink;  
+    border: 1px solid black;  
+}  
+div#myDiv1 {  
+    -ms-transform: matrix(1, -0.3, 0, 1, 0, 0); /* IE 9 */  
+    -webkit-transform: matrix(1, -0.3, 0, 1, 0, 0); /* Safari */  
+    transform: matrix(1, -0.3, 0, 1, 0, 0); /* Standard syntax */  
+}  
+div#myDiv2 {  
+    -ms-transform: matrix(1, 0, 0.5, 1, 150, 0); /* IE 9 */  
+    -webkit-transform: matrix(1, 0, 0.5, 1, 150, 0); /* Safari */  
+    transform: matrix(1, 0, 0.5, 1, 150, 0); /* Standard syntax */  
+}  
+</style>  
+</head>  
+<body>  
+<p>The matrix() method combines all the 2D transform methods into one.</p>  
+<div>  
+This  is a normal div element.  
+</div>  
+<div id="myDiv1">  
+Using the matrix() method.  
+</div>  
+<div id="myDiv2">  
+Another use of the matrix() method.  
+</div>  
+</body>  
+</html>    -->
+
+
+
+

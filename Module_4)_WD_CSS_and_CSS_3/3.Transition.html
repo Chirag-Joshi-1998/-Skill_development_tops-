@@ -1,0 +1,228 @@
+<!-- <!DOCTYPE html>    
+<html>    
+<head>    
+<style>     
+div{    
+    width: 100px;    
+    height: 100px;    
+    background: orange;    
+    -webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */    
+    transition: width 5s;    
+}    
+div:hover {    
+    width: 800px;    
+}    
+</style>    
+</head>    
+<body>    
+<div></div>    
+<p>Move the cursor over the div element above to see the transition effect.</p>    
+</body>    
+</html>   -->
+
+<!-- CSS Multiple Transition Effect -->
+<!-- It adds a transition effect for more than one CSS property. 
+If you want to add a transition effect on more than one property, 
+separate those properties with a comma.
+
+Example: Here, the transition affects width, height, 
+and transformation -->
+
+<!-- <!DOCTYPE html>    
+<html>    
+<head>    
+<style>     
+div {    
+    padding:15px;    
+    width: 150px;    
+    height: 100px;    
+    background: violet;    
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* For Safari 3.1 to 6.0 */    
+    transition: width 2s, height 2s, transform 2s;    
+}    
+div:hover {    
+    width: 300px;    
+    height: 200px;    
+    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */    
+    transform: rotate(360deg);    
+}    
+</style>    
+</head>    
+<body>    
+<div><b>topsacademy.com</b><p> (Move your cursor on me to see the effect)</p></div>    
+</body>    
+</html>     -->
+
+<!-- Shorthand Transition -->
+<!-- Using the transition property shorthand, you can define many 
+transition properties, such as the property, duration, timing 
+function, and delay. The code is made easier to understand and
+ shorter by using this shorthand. -->
+
+
+
+<!-- <!DOCTYPE html>    
+<html>    
+<head>    
+<style>     
+div {  
+    width: 100px;  
+    height: 100px;  
+    background-color: #3498db;  
+    transition: width 0.5s ease-in-out 0.5s;  
+  }  
+  div:hover {  
+    width: 200px;  
+  } 
+</style>    
+</head>    
+<body>    
+<div><b>topsacademy.com</b><p> (Move your cursor on me to see the effect)</p></div>    
+</body>    
+</html>     -->
+<!-- The transition property shorthand's syntax is as follows: -->
+<!-- element {  
+    transition: property duration timing-function delay;  
+  }    -->
+<!-- 
+  .box {  
+    width: 100px;  
+    height: 100px;  
+    background-color: #3498db;  
+    transition: width 0.5s ease-in-out 0.2s;  
+  }  
+  .box:hover {  
+    width: 200px;  
+  }   -->
+
+<!-- Different Transitions for Entry or Exit -->
+
+<!-- Changing the transition settings for hover and focus can have some 
+fascinating effects. -->
+<!-- 
+<!DOCTYPE html>    
+<html>    
+<head>    
+<style>     
+div {  
+    background-color: red;  
+    transition: background-color 2000ms ease-in;  
+  }  
+  div:hover,  
+  .div:focus {  
+    background-color: blue;  
+    transition: background-color 150ms ease;  
+  }
+</style>    
+</head>    
+<body>    
+<div><b>topsacademy.com</b><p> (Move your cursor on me to see the effect)</p></div>    
+</body>    
+</html>     -->
+
+<!-- .my-element {  
+    background-color: red;  
+    transition: background-color 2000ms ease-in;  
+  }  
+  .my-element:hover,  
+  .my-element:focus {  
+    background-color: blue;  
+    transition: background-color 150ms ease;  
+  }   -->
+
+<!-- Specify the Speed Curve of the Transition -->
+
+<!-- The timing-function property included in the transition property 
+is used to specify a transition's speed curve. How the values 
+between a transition's starting and ending states are computed 
+throughout time depends on the timing function. In CSS, many 
+predefined timing functions can create various animation effects. 
+It can have the following values: -->
+
+<!-- Easy (default): This timing function accelerates in the middle 
+before slowing down in the final stages. The animation seems natural
+ and fluid. -->
+
+<!-- .element {  
+    transition: width 0.5s ease;  
+  }  
+  .element:hover {  
+    width: 400px;  
+  }   -->
+
+<!-- Linear: The animation is consistent and mechanical since 
+  this timing function maintains a constant pace throughout 
+  the transition.ease-in: This timing feature begins gradually 
+  and picks up speed swiftly toward the finish, giving the 
+  impression that an element is "easing into" the transition. -->
+
+<!-- .element {  
+    transition: width 0.5s linear;  
+  }  
+  .element:hover {  
+    width: 400px;  
+  }   -->
+
+<!-- Ease-in: This timing feature begins gradually and picks up speed swiftly toward
+the finish, giving the impression that an element is "easing into" the
+transition. -->
+
+<!-- .element {  
+    transition: width 0.6s ease-in;  
+  }  
+  .element:hover {  
+    width: 400px;  
+  }   -->
+
+<!-- Ease-out: This timing function begins quickly and slows towards
+   the end, giving the impression that the transition is "easing out"
+    somehow. -->
+
+<!-- .element {  
+        transition: width 0.6s ease-out;  
+      }  
+      .element:hover {  
+        width: 400px;  
+      } -->
+<!-- Ease-in-out: This timing function combines ease-in and ease-out
+features to produce a smooth beginning, acceleration, deceleration,
+and end. -->
+
+<!-- .element {  
+    transition: width 0.4s ease-in-out;  
+  }  
+  .element:hover {  
+    width: 400px;  
+  }   -->
+
+<!-- Cubic-bezier: Utilising cubic Bezier control points, 
+you may design unique acceleration curves using this timing 
+function. The animation curve can be controlled precisely by it. -->
+
+<!-- .element {  
+    transition: width 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);  
+  }  
+  .element:hover {  
+    width: 300px;  
+  }   -->
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    .element {  
+      background-color: red;
+    transition: width 2.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);  
+  }  
+  .element:hover {  
+    width: 300px;  
+  } 
+    </style>
+  </head>
+  <body>
+    <div class="element">
+      <b>topsacademy.com</b>
+      <p>(Move your cursor on me to see the effect)</p>
+    </div>
+  </body>
+</html> -->

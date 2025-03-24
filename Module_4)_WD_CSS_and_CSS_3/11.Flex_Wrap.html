@@ -1,0 +1,250 @@
+<!-- <!doctype html>  
+<html lang = "en">  
+   <style>  
+      .box1{background:pink;}  
+      .box2{background:red;}  
+      .box3{background:lightblue;}  
+      .box4{background:purple;}  
+        
+      .container{  
+         display: flex;  
+      }  
+      .box{  
+         font-size:20px;  
+         padding:18px;  
+      }  
+   </style>  
+     
+   <body>  
+      <div class = "container">  
+         <div class = "box box1">Box 1</div>  
+         <div class = "box box2">Box 2</div>  
+         <div class = "box box3">Box 3</div>  
+         <div class = "box box4">Box 4</div>  
+       </div>  
+   </body>  
+</html>   -->
+
+<!-- Inline Flex -->
+
+<!-- An inline-level flex container will be produced when 
+this value is passed to the display property. It only occupies 
+the space needed for the content.
+
+The creation of an inline flex container is shown in the example 
+that follows. Here, six boxes of various colors have been made 
+and are being held in an inline-flex container. -->
+
+<!-- <!doctype html>  
+<html lang = "en">  
+   <style>  
+      .box1{background:pink;}  
+      .box2{background:red;}  
+      .box3{background:lightblue;}  
+      .box4{background:purple;}  
+        
+      .container {  
+      display:inline-flex;  
+      border:3px solid black;  
+      }  
+      .box{  
+         font-size:20px;  
+         padding:10px;  
+      }  
+   </style>  
+     
+   <body>  
+      <div class = "container">  
+         <div class = "box box1">Box 1</div>  
+         <div class = "box box2">Box 2</div>  
+         <div class = "box box3">Box 3</div>  
+         <div class = "box box4">Box 4</div>  
+       </div>  
+   </body>  
+</html>   -->
+
+
+<!-- Wrap -->
+<!-- If there isn't enough space for them, the components of the 
+container (flex items) will wrap into new flex lines starting 
+at the top and moving below.
+
+The components of the container are ordered horizontally from left
+ to right, as seen below, after supplying the value wrap to the
+  property flex-wrap.
+
+The outcome of supplying the value wrap to the flex-wrap property
+is shown in the example below. Here, using the flex-direction value 
+row, we are producing four boxes in various colors. -->
+
+
+<!-- <!doctype html>  
+<html lang = "en">  
+   <style>  
+      .box1{background:pink;}  
+      .box2{background:lightblue;}  
+      .box3{background:yellow;}  
+      .box4{background:purple;}  
+        
+      .box{  
+         font-size:20px;  
+         padding:20px;  
+         width:70px;  
+      }  
+      .container{  
+         display: flex;  
+         border:3px solid black;  
+         flex-direction: row;  
+         flex-wrap: wrap;  
+      }  
+   </style>  
+     
+   <body>  
+      <div class = "container">  
+         <div class = "box box1">Box 1</div>  
+         <div class = "box box2">Box 2</div>  
+         <div class = "box box3">Box 3</div>  
+         <div class = "box box4">Box 4</div>  
+      </div>  
+   </body>  
+</html>   -->
+
+
+<!-- Nowrap -->
+<!-- wrap-flex's default value is nowrap. It is employed 
+to indicate that the thing is unwrapped. It causes items to 
+wrap into single lines. -->
+
+<!-- <!DOCTYPE html>  
+<html>  
+  
+<head>  
+<title>Example for flex-wrap property</title>  
+<style>  
+#main {  
+width: 300px;  
+height: 50px;  
+border: 3px solid black;  
+display: flex;  
+flex-wrap: nowrap;  
+}  
+#main div {  
+width: 90px;  
+height: 50px;  
+}  
+h1 {  
+color:#009900;  
+font-size:42px;  
+margin-left:50px;  
+}  
+h3 {  
+margin-top:40px;  
+margin-left:50px;  
+}  
+</style>  
+</head>  
+  
+<body>  
+<h1>Welcome</h1>  
+<h2>Example for the flex-wrap:nowrap property</h2>  
+<div id="main">  
+<div style="background-color:pink;">Box 1</div>  
+<div style="background-color:lightblue;">Box 2</div>  
+<div style="background-color:yellow;">Box 3</div>  
+<div style="background-color:purple;">Box 4</div>  
+</div>  
+</body>  
+</html>   -->
+
+
+<!-- Wrap-reverse -->
+<!-- The components of the container are oriented horizontally 
+from left to right when the value wrap-reverse is passed to 
+the property flex-wrap, as seen below. -->
+
+<!-- <!DOCTYPE html>  
+<html>  
+  
+<head>  
+<title>Example for flex-wrap property</title>  
+<style>  
+#main {  
+width: 300px;  
+height: 200px;  
+border: 3px solid black;  
+display: flex;  
+flex-wrap: wrap-reverse;  
+}  
+#main div {  
+width: 70px;  
+height: 30px;  
+}  
+h1 {  
+color:red;  
+font-size:42px;  
+margin-left:50px;  
+}  
+h3 {  
+margin-top:10px;  
+margin-left:30px;  
+}  
+</style>  
+</head>  
+  
+<body>  
+<h1>Welcome</h1>  
+<h3>Example for the flex-wrap:wrap-reverse property</h3>  
+<div id="main">  
+<div style="background-color:pink;">Box 1</div>  
+<div style="background-color:lightblue;">Box 2</div>  
+<div style="background-color:yellow;">Box 3</div>  
+<div style="background-color:lightgreen;">Box 4</div>  
+<div style="background-color:purple;">Box 5</div>  
+<div style="background-color:gold;">Box 6</div>  
+</div>  
+</body>  
+</html>   -->
+
+<!-- Initial -->
+<!-- <!DOCTYPE html>  
+<html>  
+  
+<head>  
+<title>Example for flex-wrap property</title>  
+<style>  
+#main {  
+width: 300px;  
+height: 200px;  
+border: 3px solid black;  
+display: flex;  
+flex-wrap: initial;  
+}  
+#main div {  
+width: 70px;  
+height: 30px;  
+}  
+h1 {  
+color:red;  
+font-size:42px;  
+margin-left:50px;  
+}  
+h3 {  
+margin-top:10px;  
+margin-left:30px;  
+}  
+</style>  
+</head>  
+  
+<body>  
+<h1>Welcome</h1>  
+<h3>Example for the flex-wrap:wrap-initial property</h3>  
+<div id="main">  
+<div style="background-color:pink;">Box 1</div>  
+<div style="background-color:lightblue;">Box 2</div>  
+<div style="background-color:yellow;">Box 3</div>  
+<div style="background-color:lightgreen;">Box 4</div>  
+<div style="background-color:purple;">Box 5</div>  
+<div style="background-color:gold;">Box 6</div>  
+</div>  
+</body>  
+</html>   -->

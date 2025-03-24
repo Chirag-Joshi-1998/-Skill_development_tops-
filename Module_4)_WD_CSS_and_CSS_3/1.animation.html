@@ -1,0 +1,111 @@
+<!-- CSS animation example: changing background color -->
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>   
+body {  
+    width: 100px;  
+    height: 100px;  
+    background: red;  
+    -webkit-animation: myfirst 6s; /* Chrome, Safari, Opera */  
+    animation: myfirst 5s;  
+}  
+/* Chrome, Safari, Opera */  
+@-webkit-keyframes myfirst {  
+    from {background: red;}  
+    to {background: blue;}  
+}  
+/* Standard syntax */  
+@keyframes myfirst {  
+    from {background: red;}  
+    to {background: blue;}  
+}  
+</style>  
+</head>  
+<body>  
+<p><b>Note:</b> The IE 9 and earlier versions don't support CSS3 animation property. </p>  
+<div></div>  
+</body>  
+</html>  
+
+<!-- CSS animation example: Moving Rectangle -->
+ 
+  <!-- <!DOCTYPE html>
+  <html>
+    <head>
+      <style>
+        div {
+          width: 100px;
+          height: 100px;
+          background: red;
+          position: relative;
+          -webkit-animation: myfirst 15s; /* Chrome, Safari, Opera */
+          animation: myfirst 15s;
+        }
+        /* Chrome, Safari, Opera */
+        @-webkit-keyframes myfirst {
+          0% {
+            background: red;
+            left: 0px;
+            top: 0px;
+          }
+          25% {
+            background: yellow;
+            left: 300px;
+            top: 0px;
+          }
+          50% {
+            background: blue;
+            left: 200px;
+            top: 300px;
+          }
+          75% {
+            background: green;
+            left: 0px;
+            top: 200px;
+          }
+          100% {
+            background: red;
+            left: 0px;
+            top: 0px;
+          }
+        }
+        /* Standard syntax */
+        @keyframes myfirst {
+          0% {
+            background: red;
+            left: 0px;
+            top: 0px;
+          }
+          25% {
+            background: yellow;
+            left: 300px;
+            top: 0px;
+          }
+          50% {
+            background: blue;
+            left: 300px;
+            top: 200px;
+          }
+          75% {
+            background: green;
+            left: 0px;
+            top: 200px;
+          }
+          100% {
+            background: red;
+            left: 0px;
+            top: 0px;
+          }
+        }
+      </style>
+    </head>
+    <body>
+      <p>
+        <b>Note:</b> The Internet Explorer 9 and its earlier versions don't
+        support this example.
+      </p>    
+      <div></div>
+    </body>
+  </html> -->

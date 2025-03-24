@@ -1,0 +1,162 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <style>  
+    .gradient-background {  
+      height: 200px;  
+      background: linear-gradient(to right, #ff0000, #00ff00);  
+    }  
+      
+    .gradient-text {  
+      font-size: 24px;  
+      background: linear-gradient(to right, #ff0000, #00ff00);  
+      /* -webkit-background-clip: text;   */
+      -webkit-text-fill-color: transparent;  
+    }  
+  </style>  
+</head>  
+<body>  
+  <div class="gradient-background"></div>  
+  <h1 class="gradient-text">Hello, CSS Gradient! Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque dolore numquam tenetur modi nostrum deleniti, corporis vel esse nihil aliquam, fugiat assumenda ex accusamus corrupti id necessitatibus placeat laborum nam!
+  Eligendi perferendis quo mollitia voluptate, quas nulla esse delectus provident temporibus. Fugit exercitationem praesentium odio autem aut laborum, sequi consequatur nam repellat aspernatur ea veritatis illo molestiae corporis amet consectetur.
+  Atque quisquam fugit iste consequatur neque dolorum harum dolor voluptates beatae maiores ullam ut unde perferendis cum, iure voluptatibus ea similique? Autem quas voluptates aspernatur reprehenderit doloremque natus ipsa praesentium.
+  Quisquam sit, exercitationem alias vero pariatur sunt perferendis nemo facilis, qui ducimus recusandae quasi eaque eligendi. Quas, beatae! Dolorem, quibusdam. Animi at quam eaque labore veniam quo illum consequuntur modi.
+  Autem animi laudantium cum corporis earum assumenda fugiat nobis veritatis recusandae dolor itaque magnam excepturi voluptates iure, adipisci ex! Provident reprehenderit vitae totam magni. Fugiat ad repudiandae hic blanditiis laboriosam.</h1>  
+</body>  
+</html>  
+
+<!-- Explanation: -->
+<!-- The CSS classes gradient-background and gradient-text are used in this example.
+The div element with the gradient-background class has a horizontal gradient
+from red to green, thanks to the application of a linear gradient background.
+The gradient-text class applies a similar linear gradient background with a
+unique text effect to a h1 heading element. The text becomes transparent and
+lets the gradient background show through when the -webkit-text-fill-color and
+-webkit-background-clip properties are set to text and transparent,
+respectively. This creates the appearance of gradient-filled text. -->
+
+<!-- Types of Gradient in CSS -->
+
+<!-- 1. Linear Gradient -->
+
+<!-- <!DOCTYPE html>  
+<html>  
+<head>  
+  <style>  
+    .gradient-example {  
+      height: 200px;  
+      background: linear-gradient(to right, #ff0000, #00ff00);  
+    }  
+  </style>  
+</head>  
+<body>  
+  <div class="gradient-example"></div>  
+</body>  
+</html>   -->
+
+<!-- Example 2: -->
+<!-- Here's an example of an HTML program that uses a top-to-bottom linear gradient as the background: -->
+<!-- <!DOCTYPE html>  
+<html>  
+<head>  
+  <style>  
+    .gradient-example {  
+      height: 200px;  
+      background: linear-gradient(to bottom, #ff0000, #00ff00);  
+    }  
+  </style>  
+</head>  
+<body>  
+  <div class="gradient-example"></div>  
+</body>  
+</html>   -->
+
+
+<!-- Example 3: -->
+
+<!-- <!DOCTYPE html>  
+<html>  
+<head>  
+  <style>  
+    .gradient-example {  
+      height: 200px;  
+      background: linear-gradient(to left, #ff0000, #00ff00);  
+    }  
+  </style>  
+</head>  
+<body>  
+  <div class="gradient-example"></div>  
+</body>  
+</html>   -->
+
+<!-- 2. Radial Gradient -->
+<!-- 
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <style>  
+    .gradient-example {  
+      height: 200px;  
+      width: 200px;  
+      background: radial-gradient(circle, #ff0000, #00ff00,yellow);  
+    }  
+  </style>  
+</head>  
+<body>  
+  <div class="gradient-example"></div>  
+</body>  
+</html>   -->
+
+<!-- Example 2: -->
+
+<!-- <!DOCTYPE html>  
+<html>  
+<head>  
+  <style>  
+    .gradient-example {  
+      height: 200px;  
+      width: 200px;  
+      background: radial-gradient(circle at center, #ff0000 20%, #00ff00 45.3%, #0000ff 66.6%);  
+    }  
+  </style>  
+</head>  
+<body>  
+  <div class="gradient-example"></div>  
+</body>  
+</html>   -->
+<!-- This example uses the radial-gradient() function to apply a radial gradient background and sets the height and width of the element with the class gradient-example to 200 pixels. The gradient is situated in the element's middle and shaped like a circle. Three evenly spaced color stops are present:
+
+Red is the color stop at 0% (#ff0000).
+
+At 33.3%, the color stop is green (#00ff00).
+
+At 66.6%, the color stop is blue (#0000ff). -->
+
+
+<!-- Example 3: -->
+<!-- Here's an example of an HTML program that uses a radial gradient with differently shaped color stops: -->
+<!-- 
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <style>  
+    .gradient-example {  
+      height: 200px;  
+      width: 200px;  
+      background: radial-gradient(ellipse closest-side at 50% 50%, #ff0000 20%, #00ff00 50%, #0000ff 80%);  
+    }  
+  </style>  
+</head>  
+<body>  
+  <div class="gradient-example"></div>  
+</body>  
+</html>   -->
+
+
+<!-- This example uses the radial-gradient() function to apply a radial gradient background and sets the height and width of the element with the class gradient-example to 200 pixels. The gradient is an ellipse of 50% to the left of the element's top and 50% to its right. Three color stops are present.
+
+At 20%, the color stops are red (#ff0000).
+
+Green (#00ff00) is the color stop at 50%.
+
+Blue (#0000ff) is the color stop at 80%. -->
