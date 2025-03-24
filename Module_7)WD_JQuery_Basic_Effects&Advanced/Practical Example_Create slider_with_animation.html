@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider with Animation</title>
+   <style>
+    body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.slider-container {
+    position: relative;
+    width: 600px;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 600px;
+    height: 300px;
+    background-color: #333;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    transform: translateY(-50%);
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+   </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="./images/2.jfif" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="./images/des.jpg" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="./images/tab.jpg" alt="Slide 3">
+            </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+  <script>
+    $(document).ready(function(){
+    let currentSlide = 0;
+    const totalSlides = $('.slide').length;
+
+    // Function to move the slider
+    function moveSlider() {
+        $('.slider').css('transform', 'translateX(' + (-currentSlide * 600) + 'px)');
+    }
+
+    // Next button functionality
+    $('.next').click(function() {
+        currentSlide++;
+        if (currentSlide >= totalSlides) {
+            currentSlide = 0; // Reset to the first slide
+        }
+        moveSlider();
+    });
+
+    // Prev button functionality
+    $('.prev').click(function() {
+        currentSlide--;
+        if (currentSlide < 0) {
+            currentSlide = totalSlides - 1; // Go to the last slide
+        }
+        moveSlider();
+    });
+});
+
+  </script>
+</body>
+</html>

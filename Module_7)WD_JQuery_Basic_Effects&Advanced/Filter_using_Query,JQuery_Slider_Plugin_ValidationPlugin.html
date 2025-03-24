@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter, Slider, and Validation</title>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        select,
+        #price-slider {
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        .product {
+            margin: 10px;
+            padding: 10px;
+            background-color: #e9e9e9;
+            border-radius: 5px;
+        }
+
+        .product h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .product p {
+            margin: 5px 0 0;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Filter, Slider, and Validation Example</h2>
+
+        <!-- Filter Section -->
+        <div>
+            <label for="category-filter">Filter by Category:</label>
+            <select id="category-filter">
+                <option value="all">All</option>
+                <option value="electronics">Electronics</option>
+                <option value="clothing">Clothing</option>
+                <option value="home">Home</option>
+            </select>
+        </div>
+
+        <!-- Product List (Filtered by category) -->
+        <div id="product-list">
+            <div class="product" data-category="electronics">
+                <h3>Smartphone</h3>
+                <p>$500</p>
+            </div>
+            <div class="product" data-category="clothing">
+                <h3>T-shirt</h3>
+                <p>$20</p>
+            </div>
+            <div class="product" data-category="home">
+                <h3>Coffee Maker</h3>
+                <p>$100</p>
+            </div>
+            <div class="product" data-category="electronics">
+                <h3>Laptop</h3>
+                <p>$800</p>
+            </div>
+            <div class="product" data-category="clothing">
+                <h3>Jeans</h3>
+                <p>$40</p>
+            </div>
+        </div>
+
+        <!-- Slider for Price Range -->
+        <div>
+            <label for="price-slider">Select Price Range:</label>
+            <div id="price-slider"></div>
+            <p>Price: $<span id="price-value">50</span></p>
+        </div>
+
+        <!-- Form for Validation -->
+        <form id="my-form">
+            <label for="email">Enter your email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 1. Filter Products by Category (using jQuery)
+            $('#category-filter').change(function () {
+                var selectedCategory = $(this).val();
+
+                if (selectedCategory === 'all') {
+                    $('.product').show();
+                } else {
+                    $('.product').each(function () {
+                        var productCategory = $(this).data('category');
+                        if (productCategory === selectedCategory) {
+                            $(this).show();
+                        } else {
+                            $(this).hide();
+                        }
+                    });
+                }
+            });
+
+            // 2. jQuery Slider Plugin (Price Range)
+            $('#price-slider').slider({
+                min: 0,
+                max: 1000,
+                value: 50,
+                slide: function (event, ui) {
+                    $('#price-value').text(ui.value);
+                }
+            });
+
+            // 3. Form Validation Plugin (jQuery Validation Plugin)
+            $('#my-form').validate({
+                rules: {
+                    email: {
+                        required: true,
+                        email: true
+                    }
+                },
+                messages: {
+                    email: {
+                        required: "Please enter your email",
+                        email: "Please enter a valid email address"
+                    }
+                },
+                submitHandler: function (form) {
+                    alert('Form is valid and submitted!');
+                    form.submit();  // You can replace this with form submission logic
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

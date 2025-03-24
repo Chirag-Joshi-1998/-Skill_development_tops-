@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>jQuery Document</title>
+<!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready
+	(
+		function()
+		{
+			// $("#clickme").click(
+			// function()
+			// {
+			// 	alert("Welcome to LR Institute");
+			// });
+
+			// $("#red").css("background-color","red");
+
+			$("#red").click(
+				function()
+				{
+					$(".class1").css("background-color","red");
+				});
+			$("#blue").click(
+				function()
+				{
+					$(".class1").css("background-color","blue");
+				});
+			$("#green").click(
+				function()
+				{
+					$(".class1").css("background-color","green");
+				});
+
+		}
+	);
+</script>
+
+</head>
+<body class="class1">
+<!-- <input type="button" value="Click Me!" id="clickme"/> -->
+<input type="button" value="Click me on red background" id="red">
+<input type="button" value="Click me on green background" id="green">
+<input type="button" value="Click me on blue background" id="blue">
+</body>
+</html>

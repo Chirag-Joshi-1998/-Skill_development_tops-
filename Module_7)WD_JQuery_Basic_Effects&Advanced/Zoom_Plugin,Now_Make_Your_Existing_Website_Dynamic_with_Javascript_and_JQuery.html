@@ -1,0 +1,116 @@
+<!-- • Zoom Plugin, Now Make Your Existing Website Dynamic with Javascript and JQuery0 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoom Plugin Example</title>
+
+    <style>
+        .zoom-container {
+            max-width: 500px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        #zoom-image {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="zoom-container">
+        <h2>Hover Over Image to Zoom</h2>
+        <img id="zoom-image" src="./images/zoom.png" data-zoom-image="https://via.placeholder.com/1000" alt="Image to zoom">
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://www.elevateweb.co.uk/wp-content/uploads/elevatezoom/jquery.elevatezoom.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Apply the zoom effect on hover
+            $('#zoom-image').elevateZoom({
+                zoomType: "lens", // or 'window'
+                lensShape: "round",
+                lensSize: 200
+            });
+        });
+    </script>
+    
+
+</body>
+</html> -->
+
+
+<!-- Making Your Website Dynamic with JavaScript and jQuery -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Tabs Example</title>
+    <style>
+        .tabs {
+            display: flex;
+            cursor: pointer;
+        }
+        .tabs div {
+            padding: 10px;
+            background-color: #f0f0f0;
+            margin-right: 5px;
+        }
+        .tabs div.active {
+            background-color: #333;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background-color: #f8f8f8;
+            margin-top: 10px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tabs">
+        <div data-tab="tab1" class="active">Tab 1</div>
+        <div data-tab="tab2">Tab 2</div>
+        <div data-tab="tab3">Tab 3</div>
+    </div>
+
+    <div id="tab1" class="tab-content active">
+        <h2>Content for Tab 1</h2>
+        <p>This is the content for the first tab.</p>
+    </div>
+    <div id="tab2" class="tab-content">
+        <h2>Content for Tab 2</h2>
+        <p>This is the content for the second tab.</p>
+    </div>
+    <div id="tab3" class="tab-content">
+        <h2>Content for Tab 3</h2>
+        <p>This is the content for the third tab.</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.tabs div').click(function() {
+                // Switch active tab
+                var tabId = $(this).data('tab');
+                $('.tabs div').removeClass('active');
+                $(this).addClass('active');
+                
+                // Switch active content
+                $('.tab-content').removeClass('active');
+                $('#' + tabId).addClass('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
+

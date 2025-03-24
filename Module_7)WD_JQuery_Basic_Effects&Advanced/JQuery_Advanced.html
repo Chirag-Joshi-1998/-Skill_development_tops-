@@ -1,0 +1,234 @@
+<!-- JQuery Advanced 1) jQuery Traversing 2) jQuery Ancestors 3) jQuery Descendants 4) jQuery Siblings 5) jQuery Filtering -->
+<!-- jQuery Advanced Concepts
+Here’s a breakdown of some advanced jQuery concepts you requested:
+
+jQuery Traversing: Traversing is the process of moving between different DOM elements. jQuery provides several methods for traversing and manipulating elements.
+
+jQuery Ancestors: These methods allow us to traverse up the DOM tree to the parent, grandparent, or any ancestor element.
+
+jQuery Descendants: These methods let us traverse down the DOM tree to child, grandchild, or deeper descendant elements.
+
+jQuery Siblings: These methods allow us to traverse to an element’s siblings (elements that share the same parent).
+
+jQuery Filtering: Filtering methods are used to filter elements in the DOM based on a condition or criteria.
+
+Let’s look at examples for each of these concepts. -->
+
+
+<!-- 1. jQuery Traversing -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Traversing Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="parent">
+        <div class="child">Child 1</div>
+        <div class="child">Child 2</div>
+        <div class="child">Child 3</div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Example of traversing using .parent()
+            $(".child").first().parent().css("border", "2px solid red"); // Selects parent and adds a border
+
+            // Example of traversing using .children()
+            $("#parent").children().css("background-color", "lightblue"); // All children get background color
+        });
+    </script>
+</body>
+</html> -->
+
+<!-- 2. jQuery Ancestors -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Ancestors Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="grandparent">
+        <div class="parent">
+            <div class="child">
+                I am the child
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Example of traversing upwards with .closest() and .parents()
+            $(".child").closest(".parent").css("border", "2px solid green"); // Closest parent matching the class
+            $(".child").parents(".grandparent").css("border", "2px solid blue"); // All ancestors up to grandparent
+        });
+    </script>
+</body>
+</html> -->
+
+<!-- 3. jQuery Descendants -->
+ 
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Descendants Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="parent">
+        <div class="child">
+            <div class="grandchild">Grandchild</div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Example of traversing downward with .find() and .children()
+            $("#parent").find(".grandchild").css("color", "red"); // Find descendants matching class "grandchild"
+            $("#parent").children(".child").css("font-weight", "bold"); // Direct children with class "child"
+        });
+    </script>
+</body>
+</html> -->
+
+
+<!-- 4. jQuery Siblings -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Siblings Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div class="sibling">Sibling 1</div>
+        <div class="sibling">Sibling 2</div>
+        <div class="sibling">Sibling 3</div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Example of traversing siblings using .next() and .prev()
+            $(".sibling").first().next().css("background-color", "yellow"); // Select the next sibling
+            $(".sibling").last().prev().css("background-color", "lightgreen"); // Select the previous sibling
+        });
+    </script>
+</body>
+</html> -->
+
+
+<!-- 5. jQuery Filtering -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Filtering Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="item">Item 1</div>
+    <div class="item special">Item 2 (Special)</div>
+    <div class="item">Item 3</div>
+
+    <script>
+        $(document).ready(function() {
+            // Example of filtering using .filter() and .not()
+            $(".item").filter(".special").css("color", "red"); // Filters the item with "special" class
+            $(".item").not(".special").css("color", "gray"); // Filters all items except the "special" class
+        });
+    </script>
+</body>
+</html> -->
+
+<!-- 6. jQuery .load() -->
+<!-- $(selector).load(url, data, callback);
+selector: The element where the content will be loaded.
+
+url: The URL from which the content is fetched.
+
+data (optional): Data that you may want to send along with the request. -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery .load() Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <div id="content"></div>
+    <button id="loadContent">Load Content</button>
+
+    <script>
+        $(document).ready(function() {
+            $("#loadContent").click(function() {
+                // Using .load() to fetch content from a URL and inject it into the #content div
+                $("#content").load("content.html", function(response, status, xhr) {
+                    if (status == "error") {
+                        var msg = "Sorry, there was an error: ";
+                        $("#content").html(msg + xhr.status + " " + xhr.statusText);
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
+ -->
+
+
+
+ <!-- 7. jQuery .noConflict()-->
+ <!-- When you use jQuery alongside other JavaScript libraries, there might be conflicts because other libraries might also use the $ symbol. The .noConflict() method allows you to give up control of the $ variable and use jQuery with a different name (usually jQuery).
+
+ Why use .noConflict()?
+ If you're working on a page where multiple JavaScript libraries use the $ symbol (like Prototype.js or MooTools), using .noConflict() will prevent conflicts. -->
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery No Conflict Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prototype@1.7.3.0/dist/prototype.min.js"></script> <!-- Example of another library using $ -->
+</head>
+<body>
+    <div id="message">Hello, World!</div>
+    <button id="changeText">Change Text</button>
+
+    <script>
+        var jq = $.noConflict();  // Give up control of $ and assign it to jq
+        
+        jq(document).ready(function() {
+            jq("#changeText").click(function() {
+                jq("#message").text("Text has been changed with jQuery!");
+            });
+        });
+        
+    
+    </script>
+</body>
+</html>
+

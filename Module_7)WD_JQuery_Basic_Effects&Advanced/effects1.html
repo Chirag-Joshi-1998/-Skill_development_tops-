@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <style>
+    span {
+        color: red;
+        cursor: pointer;
+    }
+
+    div {
+        margin: 3px;
+        width: 80px;
+        display: none;
+        height: 80px;
+        float: left;
+    }
+
+    div#one {
+        background: #f00;
+    }
+
+    div#two {
+        background: #0f0;
+    }
+
+    div#three {
+        background: #00f;
+    }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+
+<body> 
+	<span>Click here...</span>
+    <div id="one"></div>
+    <div id="two"></div>
+    <div id="three"></div>
+    <script>
+    $(document.body).click(function() { $("div:hidden:first").fadeIn("slow"); });
+    </script>
+</body>
+
+</html>
+<!-- <html>
+
+<head>
+    <style>
+    p {
+        font-size: 150%;
+        cursor: pointer;
+    }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+
+<body>
+    <p> If you click on this paragraph you'll see it just fade away. </p>
+    <script>
+    $("p").click(function() { $("p").fadeOut("slow"); });
+    </script>
+</body>
+
+</html> -->

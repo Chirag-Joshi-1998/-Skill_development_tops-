@@ -1,0 +1,94 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		span{
+			color: darkred;
+			cursor: pointer;
+		}
+		div{
+			margin: 3px;
+			width: 80px;
+			display: none;
+			height: 80px;
+			float: left;
+		}
+		div#one
+		{
+			background-color: blue;
+		}
+		div#two
+		{
+			background-color: red;
+		}
+		div#three
+		{
+			background-color: green;
+		}
+	</style>
+	<script src="jquery.js"></script>
+</head>
+<body>
+<span>Click Here...</span>
+<div id="one"></div>
+<div id="two"></div>
+<div id="three"></div>
+<script type="text/javascript">
+	$(document.body).click(function()
+	{
+		$("div:hidden:first").fadeIn("slow");
+
+	});
+</script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		span{
+			color: darkred;
+			cursor: pointer;
+		}
+		div{
+			margin: 3px;
+			width: 80px;
+			height: 80px;
+			float: left;
+		}
+		div#one
+		{
+			background-color: blue;
+		}
+		div#two
+		{
+			background-color: red;
+		}
+		div#three
+		{
+			background-color: green;
+		}
+	</style>
+	<script src="jquery.js"></script>
+</head>
+<body>
+<span>Click Here...</span>
+<div id="one"></div>
+<div id="two"></div>
+<div id="three"></div>
+<script type="text/javascript">
+	$(document.body).click(function()
+	{
+		$("#one").fadeOut(3000);
+		$("#two").fadeOut(2000);
+		$("#three").fadeOut(1000);
+	});
+</script>
+</body>
+</html>
