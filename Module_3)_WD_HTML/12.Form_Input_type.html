@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Form Input Types</title>
+  </head>
+  <body>
+    <!-- 1. <input type="text">: -->
+    <!-- <input> element of type "text" are used to define a 
+     single-line input text field. -->
+
+    <!-- Example: -->
+    <!-- <form>  
+        <label>Enter first name</label><br>  
+        <input type="text" name="firstname"><br>  
+        <label>Enter last name</label><br>  
+        <input type="text" name="lastname"><br>  
+         
+    </form>   -->
+
+    <!-- 2. <input type="password">: -->
+    <!-- The <input> element of type "password" allow a user to enter
+     the password securely in a webpage. The entered text in 
+     password filed converted into "*" or ".", so that it cannot be
+      read by another user. -->
+
+    <!-- <form>  
+        <label>Enter User name</label><br>  
+        <input type="text" name="firstname"><br>  
+        <label>Enter Password</label><br>  
+        <input type="Password" name="password"><br>  
+        <br><input type="submit" value="submit">  
+    </form> -->
+
+    <!-- 3. <input type="submit">: -->
+    <!-- The <input> element of type "submit" defines a submit button 
+    to submit the form to the server when the "click" event occurs. -->
+
+    <!-- Example: -->
+    <!-- <form action="https://www.topsacademy.com/advanced-web-designing-training-courses">  
+        <label>Enter User name</label><br>  
+        <input type="text" name="firstname"><br>  
+        <label>Enter Password</label><br>  
+        <input type="Password" name="password"><br>  
+        <br><input type="submit" value="submit">  
+    </form>   -->
+
+    <!-- 4. <input type="reset">: -->
+    <!-- The <input> type "reset" is also defined as a button but when
+     the user performs a click event, it by default reset the all
+      inputted values. -->
+
+    <!-- <form>  
+        <label>User id: </label>  
+         <input type="text" name="user-id" value="user">  
+                  <label>Password: </label>  
+         <input type="password" name="pass" value="pass"><br><br>   
+         <input type="submit" value="login">  
+          <input type="reset" value="Reset">  
+    </form>   -->
+    <!-- 5. <input type="radio">: -->
+    <!-- The <input> type "radio" defines the radio buttons,
+     which allow choosing an option between a set of related options.
+      At a time only one radio button option can be selected at a 
+      time. -->
+<!-- 
+    <form>  
+        <p>Kindly Select your favorite color</p>  
+        <input type="radio" name="color" value="red"> Red <br>  
+        <input type="radio" name="color" value="blue"> blue <br>  
+        <input type="radio" name="color" value="green">green <br>  
+        <input type="radio" name="color" value="pink">pink <br>  
+        <input type="submit" value="submit">  
+      </form>   -->
+
+    <!-- 6. <input type="checkbox">: -->
+    <!-- The <input> type "checkbox" are displayed as square boxes
+       which can be checked or unchecked to select the choices from 
+       the given options. -->
+
+    <!-- Note: The "radio" buttons are similar to checkboxes,
+        but there is an important difference between both types: 
+        radio buttons allow the user to select only one option at a
+         time, whereas checkbox allows a user to select zero to 
+         multiple options at a time. -->
+
+    <!-- Example: -->
+    <!-- <form>   
+            <label>Enter your Name:</label>  
+            <input type="text" name="name">  
+            <p>Kindly Select your favourite sports</p>  
+            <input type="checkbox" name="sport1" value="cricket">Cricket<br>  
+            <input type="checkbox" name="sport2" value="tennis">Tennis<br>  
+            <input type="checkbox" name="sport3" value="football">Football<br>  
+            <input type="checkbox" name="sport4" value="baseball">Baseball<br>  
+            <input type="checkbox" name="sport5" value="badminton">Badminton<br><br>  
+            <input type="submit" value="submit">  
+        </form>   -->
+    <!-- 7. <input type="button">: -->
+    <!-- The <input> type "button" defines a simple push button, 
+        which can be programmed to control a functionally on any 
+        event such as, click event. -->
+
+    <!-- Note: It mainly works with JavaScript. -->
+
+    <!-- <form>  
+            <input type="button" value="Clcik me " onclick="alert('you are learning HTML')">  
+       </form>   -->
+
+    <!-- Note: In the above example we have used the "alert" of JS, 
+       which you will learn in our JS tutorial. It is used to show 
+       a pop window. -->
+
+    <!-- 8. <input type="file">: -->
+    <!-- The <input> element with type "file" is used to select 
+       one or more files from user device storage. Once you select
+       the file, and after submission, this file can be uploaded to 
+       the server with the help of JS code and file API. -->
+
+    <!-- <form>  
+        <label>Select file to upload:</label>  
+        <input type="file" name="newfile">  
+        <input type="submit" value="submit">  
+   </form>  -->
+    <!-- 9. <input type="image">: -->
+    <!-- The <input> type "image" is used to represent a submit button 
+   in the form of image. -->
+
+    <!-- <h2>Input "image" type.</h2>
+    <p>We can create an image as submit button</p>
+    <form>
+      <label>User id:</label><br />
+      <input type="text" name="name" /><br /><br />
+      <input type="image" alt="Submit" src="./1.jpg" width="100px" />
+   </form> -->
+
+    <!-- HTML5 newly added <input> types element -->
+
+    <!-- 1. <input type="color">: -->
+    <!-- Note: The "color" type only supports color value in hexadecimal
+     format, and the default value is #000000 (black). -->
+
+    <!-- <form>  
+        Pick your Favorite color: <br><br>  
+        <input type="color" name="upclick" value="#a52a2a"> Upclick<br><br>  
+        <input type="color" name="downclick" value="#f5f5dc"> Downclick  
+    </form>   -->
+    <!-- 2. <input type="date">: -->
+    <!-- The <input> element of type "date" generates an input field,
+     which allows a user to input the date in a given format.
+      A user can enter the date by text field or by date picker 
+      interface. -->
+
+    <!-- <form>  
+        Select Start and End Date: <br><br>  
+          <input type="date" name="Startdate"> Start date:<br><br>  
+          <input type="date" name="Enddate"> End date:<br><br>  
+         <input type="submit">  
+    </form>   -->
+    <!-- 3. <input type="datetime-local">: -->
+    <!-- The <input> element of type "datetime-local" creates input 
+    filed which allow a user to select the date as well as local
+     time in the hour and minute without time zone information. -->
+
+    <!-- <form>  
+        <label>  
+          Select the meeting schedule: <br><br>  
+          Select date & time: <input type="datetime-local" name="meetingdate"> <br><br>  
+        </label>  
+          <input type="submit">  
+    </form>   -->
+    <!-- 4. <input type="email">: -->
+    <!-- The <input> type "email" creates an input filed which allow a
+     user to enter the e-mail address with pattern validation. 
+     The multiple attributes allow a user to enter more than one
+      email address. -->
+    <!-- <form>
+      <label><b>Enter your Email-address</b></label>
+      <input type="email" name="email" required />
+      <input type="submit" />
+      <p>
+        <strong>Note:</strong>User can also enter multiple email addresses
+        separating by comma or whitespace as following:
+      </p>
+      <label><b>Enter multiple Email-addresses</b></label>
+      <input type="email" name="email" multiple />
+      <input type="submit" />
+    </form> -->
+    <!-- 5. <input type="month">: -->
+    <!-- The <input> type "month" creates an input field which 
+    allows a user to easily enter month and year in the format 
+    of "MM, YYYY" where MM defines month value, and YYYY defines 
+    the year value. New -->
+
+    <!-- <form>  
+        <label>Enter your Birth Month-year: </label>  
+        <input type="month" name="newMonth">  
+        <input type="submit">  
+    </form>   -->
+    <!-- 6. <input type="number">: -->
+    <!-- The <input> element type number creates input filed which 
+    allows a user to enter the numeric value. You can also restrict
+     to enter a minimum and maximum value using min and max attribute. -->
+
+     <!-- <form>  
+        <label>Enter your age: </label>  
+        <input type="number" name="num" min="50" max="80">  
+         <input type="submit">  
+    </form>   -->
+
+    <!-- 7. <input type="url">: -->
+    <!-- The <input> element of type "url" creates an input filed which enables user to enter the URL. -->
+    <!-- <form>  
+        <label>Enter your website URL: </label>  
+        <input type="url" name="website" placeholder="http://example.com"><br>  
+        <input type="submit" value="send data">  
+    </form>   -->
+    <!-- 8. <input type="week">: -->
+    <!-- The <input> type week creates an input field which allows a
+     user to select a week and year form the drop-down calendar 
+     without time zone. -->
+
+     <!-- <form>  
+        <label><b>Select your best week of year:</b></label><br><br>  
+        <input type="week" name="bestweek">  
+        <input type="submit" value="Send data">  
+     </form>   -->
+
+     <!-- 9. <input type="search">: -->
+
+     <!-- The <input> type "search" creates an input filed which allows
+      a user to enter a search string. These are functionally
+       symmetrical to the text input type, but may be styled
+        differently. -->
+        <!-- <form>  
+            <label>Search here:</label>  
+            <input type="search" name="qee">  
+            <input type="submit" value="search">  
+        </form>   -->
+
+        <!-- 10. <input type="tel">: -->
+        <!-- The <input> element of type ?tel? creates an input 
+        filed to enter the telephone number. The "tel" type does
+        not have default validation such as email, because telephone
+        number pattern can vary worldwide. -->
+
+        <!-- <form>  
+            <label><b>Enter your Telephone Number(in format of xxx-xxx-xxxx):</b></label>  
+            <input type="tel" name="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>  
+            <input type="submit"><br><br>  
+         </form>    -->
+         
+
+
+
+
+  </body>
+</html>

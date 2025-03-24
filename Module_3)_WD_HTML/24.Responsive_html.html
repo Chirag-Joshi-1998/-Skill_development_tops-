@@ -1,0 +1,80 @@
+<!-- By using the width property -->
+
+ 
+<!-- <!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <body>
+    <h2>Responsive Image</h2>
+    <p>
+      When we set the CSS width property to 100%, it makes the image responsive.
+      Resize the browser window to see the effect.
+    </p>
+    
+    <img src="./1.jpg" style="width: 100%" />
+  </body>
+</html> -->
+
+<!-- By using the max-width Property -->
+
+<!-- This method is best and most used because it facilitates that the 
+image will scale down if it has to, but never scale up to be larger 
+than its original size. -->
+
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <body>
+    <h2>Responsive Image</h2>
+    <p>
+      "max-width:100%" makes the image responsive and also ensures that the
+      image doesn't get bigger than its original size.
+    </p>
+    <p>Resize the browser window to see the effect.</p>
+    <img src="./images/main-banner-1.webp" style="max-width: 100%; height: auto" />
+  </body>
+</html>
+
+<!-- Change images according to the browser width -->
+<!-- By using the HTML <picture> element, you can set two or more 
+    imagesaccording to the browser width. It will change the 
+    picture when you change the browser-size. i.e. desktop and 
+    phone. -->
+
+<!-- <!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <body>
+    <h2>Change Images Depending on Browser Width</h2>
+    <p>
+      Resize the browser width and the image will change at 600px and 1500px.
+    </p>
+    <picture>
+      <source srcset="./images/phone.jpg" media="(max-width: 400px)" />
+    
+      <source srcset="./images/tab.jpg" media="(max-width: 600px)" />
+      <source srcset="./images/des.jpg" media="(max-width: 800px)" />
+
+      <img src="./images/2.jfif" alt="Flowers" style="width: auto" />
+    </picture>
+  </body>
+</html> -->
+
+<!-- Responsive Text-size -->
+<!-- We can make the text size responsive by using the "uv" unit. 
+ It means viewport-width. By using this, we can make the text size 
+ to follow the browserwindow screen. -->
+
+<!-- <!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <body>
+    <h1 style="font-size: 10vw">Here size is 10vw.</h1>
+    <p style="font-size: 6vw">Here size is 6vw.</p>
+    <p style="font-size: 4vw">Here size is 4vw.</p>
+    <p>Resize the browser window to see how the text size changes.</p>
+  </body>
+</html> -->
+
+
+

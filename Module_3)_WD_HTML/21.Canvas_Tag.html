@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Tag</title>
+  </head>
+  <body>
+    <!-- How to create a HTML canvas? -->
+    <!-- <canvas id = "mycanvas" width ="200" height ="100"> </canvas>   -->
+    <!-- HTML 5 Canvas Tag Example -->
+
+    <!-- <canvas id="myCanvas1" width="300" height="100" style="border:2px solid;">  
+        Your browser does not support the HTML5 canvas tag.  
+        </canvas>   -->
+    <!-- Note: It is always necessary to specify the id attribute and 
+        the height & width attribute to define the size of the canvas.
+         You can have multiple canvas elements on one HTML page. -->
+
+    <!-- HTML Canvas Tag with JavaScript -->
+
+    <canvas id="test" width="250" height="150" style="border:1px solid #c3c3c3;">  
+            Your browser does not support the HTML5 canvas tag.  
+            </canvas>  
+            <script>  
+            var c = document.getElementById("test");  
+            var ctx = c.getContext("2d");  
+            ctx.fillStyle = "blue";  
+            ctx.fillRect(0,0,200,100);  
+            </script>  
+
+    <!-- Drawing Line on Canvas -->
+
+    <!-- <canvas id="myCanvasLine" width="200" height="100" style="border:1px solid #d3d3d3;">  
+                Your browser does not support the HTML5 canvas tag.</canvas>  
+                <script>  
+                var c = document.getElementById("myCanvasLine");  
+                var ctx = c.getContext("2d");  
+                ctx.moveTo(0,0);  
+                ctx.lineTo(200,100);  
+                ctx.stroke();  
+                </script>   -->
+
+    <!-- Drawing Circle on Canvas -->
+    <!-- <canvas id="myCanvasCircle" width="200" height="100" style="border:1px solid #d3d3d3;">  
+                    Your browser does not support the HTML5 canvas tag.</canvas>  
+                    <script>  
+                    var c = document.getElementById("myCanvasCircle");  
+                    var ctx = c.getContext("2d");  
+                    ctx.beginPath();  
+                    // ctx.fillStyle = "red"; 
+                    ctx.arc(95,50,40,0,2*Math.PI);  
+                    ctx.stroke();
+                    //ctx.fill();  
+                    </script>   -->
+
+    <!-- Drawing text on canvas -->
+    <!-- <canvas id="myCanvasText1" width="300" height="100" style="border:1px solid #d3d3d3;"></canvas>  
+        <script>  
+                const c=document.getElementById('myCanvasText1')
+                const ctx=c.getContext("2d")
+                ctx.fillStyle = "blue";
+                ctx.fillRect(100, 10, 100, 100);
+        </script>   -->
+        
+
+  </body>
+</html>

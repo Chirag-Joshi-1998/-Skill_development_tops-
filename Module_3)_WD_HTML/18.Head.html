@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Head</title>
+  </head>
+  <body>
+    <!-- Following is a list of tags used in metadata: -->
+    <!-- <title>
+        <style>
+        <meta>
+        <link>
+        <script>
+        <base> -->
+
+    <!-- HTML <title> Element -->
+
+    <!-- The HTML <title> element is used to define the title of
+        the document. It is used in all HTML/XHTML documents. The <title> 
+        element must be placed between <head> element, and one document
+        can only have one title element. -->
+    <!-- What does <title> element do? -->
+    <!-- 1.It defines a title in the browser tab. -->
+    <!-- 2.It provides a title for the page when it is added to favorites. -->
+    <!-- 3.It displays a title for the page in search engine results. -->
+    <!-- Note: The title element must be specific about the document 
+        and its recommended length is 65 to 70 characters including
+         spaces -->
+
+    <!-- <title>This Page Title</title>   -->
+
+    <!-- HTML <style> Element -->
+    <!-- The HTML <style> element is used to style the HTML page.
+          The <style> element can have CSS properties for that HTML
+          page only. If we want to apply CSS for multiple pages 
+          then we should use separate CSS file. -->
+
+    <style>
+      body {
+        background-color: pink;
+      }
+      h1 {
+        color: red;
+      }
+      p {
+        color: blue;
+      }
+    </style>
+    <h1>test</h1>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos inventore
+      eum atque ratione ut voluptas, dolore aperiam? Tenetur aperiam magnam
+      nihil accusamus labore quod consectetur veniam esse, corrupti, veritatis
+      fuga!
+    </p>
+
+    <!-- HTML <link> Element -->
+    <!-- The HTML <link> element is used to link an external style 
+    sheet to your webpage. The <link> element contains main two
+    attributes which are "rel" and "href". The rel attribute 
+    indicates that it is a stylesheet, and href gives the path 
+    to that external file. -->
+    <!-- <link rel="stylesheet" href="style.css">   -->
+
+    <!-- HTML <meta> Element -->
+
+    <!-- The HTML <meta> element is used to specify the character set, 
+    page description, keywords, authors and other metadata on the 
+    webpage. -->
+
+    <!-- Metadata is mainly used by browsers, search engines, and other 
+    web services to rank your webpage better. -->
+
+    <!-- <meta charset="UTF-8">   -->
+
+    <!-- The charset attribute specifies the character encoding. 
+    In this example we have set it to "UTF-8" which means it can 
+    handle to display any language. -->
+
+    <!-- Example: -->
+    <!-- <meta charset="UTF-8">     -->
+
+    <!-- To define keywords for search engines: -->
+
+    <!-- <meta name="keywords" content="HTML, CSS, XML, JavaScript">  
+      -->
+    <!-- The keyword value is also used to provide keywords for a
+       search engine, but it may ignore by browser due to spammers. -->
+
+    <!-- To define author of the webpage: -->
+
+    <!-- <meta name="author" content="Akon">   -->
+    <!-- The author value specifies the name of the person who wrote 
+       the page content, and it is useful to automatically extract 
+       author information by some content management systems. -->
+
+    <!-- To refresh document every 30 seconds: -->
+
+    <!-- <meta http-equiv="refresh" content="30">   -->
+
+    <!-- Meta refresh is used to provide instructions to the browser 
+       to automatically refresh the page after the given time 
+       interval. As in above example it will automatically refresh 
+       after 30 sec -->
+
+    <!-- <meta http-equiv="refresh" content="10; url=https://www.topsacademy.com/">  -->
+
+    <!-- If you add an URL with content value, then it will redirect to that page after the time limit will over. -->
+
+    <!-- Following is an example to show how to use all Meta elements 
+     within HTML head -->
+
+    <!-- <meta charset="UTF-8" />
+    <meta name="description" content="Free Web tutorials" />
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript" />
+    <meta name="author" content="Akon" /> -->
+
+    <!-- Use <meta> tag to set the Viewport -->
+    <!-- This method is introduced in HTML5 to take control over the
+     viewport by using <meta> tag.
+
+    Viewport is the user's visible area of a webpage. It changes
+     from device to device and appears smaller on mobile phones
+      than computer screens. -->
+    <!-- Syntax for <meta> viewport element: -->
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">   -->
+
+    <!-- Here, the <meta /> viewport element specifies how to control the page's
+    dimensions and scaling. The width=device-width is used to set the width of
+    the page to follow the screen-width of the device (which will vary depending
+    on the device). -->
+
+    <!-- The initial-scale=1.0 is used to set the initial zoom level when
+     the page is first loaded by the browser. -->
+
+    <!-- Example of a web page without the viewport <meta> tag: -->
+    <!-- <p><b>To understand this example, you should open this page on a phone or a tablet.</b></p>  
+  
+     <img src="./1.jpg" alt="image" width="460" height="345">  
+       
+     <p>  
+     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut   
+     laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation   
+     ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel   
+     eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu   
+     feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum  
+     zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis   
+     eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.  
+     Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat  
+     facer possim assum.  
+     </p>   -->
+
+    <!-- HTML <base> Element -->
+    <!-- The HTML <base> element is used to specify the base URL and
+      base target for all relative URLs in a page. -->
+
+    <!-- <base href="https://www.topsacademy.com/" target="_blank">   -->
+
+    <!-- HTML <script> element -->
+    <!-- HTML <script> element is used to apply client side 
+      JavaScript for the same page or to add an external JavaScript
+       file to current page. -->
+
+    <!-- If we want to use some external JavaScript file then it can
+      be applied by: -->
+    <!-- <script src=".js file_path">   -->
+
+
+  </body>
+</html>
