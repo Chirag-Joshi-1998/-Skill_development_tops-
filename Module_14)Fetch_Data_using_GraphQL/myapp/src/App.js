@@ -5,7 +5,7 @@ import ItemForm from './MyComponets/ItemForm';
 import ItemList from './MyComponets/ItemList';
 
 
-const client = new ApolloClient({
+const client = new ApolloCliecdcdnt({
   uri: "https://graphqlzero.almansi.me/api", 
   cache: new InMemoryCache(),
 });
