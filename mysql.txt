@@ -186,8 +186,9 @@ CREATE TABLE Salary(
 	SalaryID int NOT NULL,
 	OrderNumber int NOT NULL,
 	ID int,
-    PRIMARY KEY (ID),
-    FOREIGN KEY (ID ) REFERENCES Employee(ID)
+    	PRIMARY KEY (ID),
+	CONSTRAINT FK_Employee_Dept FOREIGN KEY (ID ) REFERENCES Employee(ID)
+    
 );
 
 
