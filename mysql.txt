@@ -359,6 +359,10 @@ FETCH FIRST 3 ROWS ONLY;
 Data Control Language (DCL) -GRANT Command, Granting Privileges to Users or Roles,
 Granting SELECT, INSERT, UPDATE, DELETE Permissions
 
+Check the who is the user 
+
+select user();
+
 
 Example 1: MySQL Create Single User
 CREATE USER chirag@localhost IDENTIFIED BY 'chirag';
