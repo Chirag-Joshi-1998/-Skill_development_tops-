@@ -363,6 +363,11 @@ Check the who is the user
 
 select user();
 
+how to change user 
+
+system mysql -u chirag -p
+Enter Password:
+
 
 Example 1: MySQL Create Single User
 CREATE USER chirag@localhost IDENTIFIED BY 'chirag';
