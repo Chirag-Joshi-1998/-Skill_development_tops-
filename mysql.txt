@@ -362,6 +362,8 @@ Granting SELECT, INSERT, UPDATE, DELETE Permissions
 Check the who is the user 
 
 select user();
+user list 
+SELECT User FROM mysql.user;
 
 how to change user 
 
@@ -379,7 +381,7 @@ mysql> CREATE USER
     -> 'deep@localhost' IDENTIFIED BY 'deep';
 Query OK, 0 rows affected (0.02 sec)
 
-mysql> GRANT SELECT, INSERT, DELETE, UPDATE ON  persons TO 'deep@localhost';
+mysql> GRANT SELECT, INSERT, DELETE, UPDATE ON  persons TO 'chirag@localhost';	
 Query OK, 0 rows affected (0.01 sec)
 
 
