@@ -558,17 +558,43 @@ The GROUP BY statement groups rows that have the same values into summary rows, 
 
 The GROUP BY statement is often used with aggregate functions (COUNT(), MAX(), MIN(), SUM(), AVG()) to group the result-set by one or more columns.
 
+SELECT Product, SUM(Quantity) AS TotalSold
+FROM Sales
+GROUP BY Product;
+INSERT INTO Product (ProductID, ProductName, Category, Price, QuantityInStock)
+VALUES 
+(1, 'Apple iPhone 15', 'Electronics', 999.99, 25),
+(2, 'Samsung Galaxy S23', 'Electronics', 899.99, 30),
+(3, 'Sony WH-1000XM5', 'Audio', 349.99, 15),
+(4, 'Apple MacBook Air', 'Computers', 1249.00, 10),
+(5, 'Dell XPS 13', 'Computers', 999.00, 8),
+(6, 'Google Pixel 8', 'Electronics', 799.00, 20),
+(7, 'Bose QuietComfort 45', 'Audio', 329.00, 12),
+(8, 'Lenovo ThinkPad X1', 'Computers', 1399.00, 5);
 
-SELECT COUNT(CustomerID), Country
-FROM Customers
-GROUP BY Country;
+SELECT Category, COUNT(*) AS ProductCount
+FROM Product
+GROUP BY Category;
+
+SELECT Category, MAX(Price) AS MaxPrice
+FROM Product
+GROUP BY Category;
+
+SELECT Category, MIN(Price) AS MinPrice
+FROM Product
+GROUP BY Category;
 
 
 
-SELECT COUNT(CustomerID), Country
-FROM Customers
-GROUP BY Country
-ORDER BY COUNT(CustomerID) DESC;
+SELECT Category, SUM(QuantityInStock) AS TotalStock
+FROM Product
+GROUP BY Category;
+
+
+SELECT Category, AVG(Price) AS AvgPrice
+FROM Product
+GROUP BY Category;
+
 
 
 SQL Stored Procedure - Definition and Purpose of Stored Procedures, Creating and Executing
