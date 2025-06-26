@@ -597,15 +597,122 @@ GROUP BY Category;
 
 
 
-SQL Stored Procedure - Definition and Purpose of Stored Procedures, Creating and Executing
-Stored Procedures
 
-CREATE PROCEDURE SelectAllCustomers
-AS
-SELECT * FROM Customers
-GO;
+CREATE TABLE users (
+    user_id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
-EXEC SelectAllCustomers;
+INSERT INTO users (username, email, password)
+VALUES 
+    ('alice', 'alice@example.com', 'hashed_password_1'),
+    ('bob', 'bob@example.com', 'hashed_password_2'),
+    ('charlie', 'charlie@example.com', 'hashed_password_3');
+
+
+
+DELIMITER //
+
+CREATE PROCEDURE GetUserByEmail(
+    IN userEmail VARCHAR(100)
+)
+BEGIN
+    SELECT user_id, username, email, created_at
+    FROM users
+    WHERE email = userEmail;
+END //
+
+DELIMITER ;
+
+
+
+CALL GetUserByEmail('alice@example.com');
+
+
+create view
+
+
+
+CREATE VIEW view_user_info AS
+SELECT 
+    user_id,
+    username,
+    email
+FROM 
+    users;
+
+
+SELECT * FROM view_user_info;
+
+ cursor
+
+DELIMITER //
+
+CREATE PROCEDURE SimpleCursor()
+BEGIN
+    DECLARE done INT DEFAULT 0;
+    DECLARE u_name VARCHAR(50);
+    DECLARE cur CURSOR FOR SELECT username FROM users;
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = 1;
+
+    OPEN cur;
+
+    read_loop: LOOP
+        FETCH cur INTO u_name;
+        IF done THEN
+            LEAVE read_loop;
+        END IF;
+
+        -- Simple output
+        SELECT u_name AS username;
+    END LOOP;
+
+    CLOSE cur;
+END //
+
+DELIMITER ;
+
+CALL SimpleCursor();
+
+
+trigger
+
+CREATE TABLE user_logs (
+    log_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    action VARCHAR(50),
+    action_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+SELECT * FROM user_logs;
+
+SHOW TRIGGERS LIKE 'users';
+
+
+DELIMITER //
+
+CREATE TRIGGER after_user_insert
+AFTER INSERT ON users
+FOR EACH ROW
+BEGIN
+    INSERT INTO user_logs (user_id, action)
+    VALUES (NEW.user_id, 'User Registered');
+END;
+
+//
+
+DELIMITER ;
+
+INSERT INTO users (username, email, password)
+VALUES ('david', 'david@example.com', 'hashed_password_4');
+
+SELECT * FROM user_logs;
+
+
+
 
 
 SQL View - Creating Views in SQL, Advantages of Using Views
